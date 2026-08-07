@@ -8,7 +8,6 @@
 # TLS at the edge and forward plain HTTP to PHP: there %{HTTPS} reads "off" even
 # though the visitor is on HTTPS, so we also trust X-Forwarded-Proto. Without it
 # you can hit an infinite redirect loop on those hosts.
-
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} off
