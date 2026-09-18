@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pawn Shop &amp; Fine Jewelry Store in Ocean Springs, MS | Triple Diamond</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Inter:wght@400..700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Custom Styles for Hero Facebook Layout, Clickable Reviews, Overall Rating, and Background #f1f2f4 -->
+<style>
+  .hero-inner--home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-panel--home {
+    flex: 1 1 450px;
+  }
+
+  .hero-fb-wrapper {
+    flex: 1 1 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .hero-fb-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-fb-header svg {
+    width: 20px;
+    height: 20px;
+    fill: #d4af37;
+  }
+
+  .hero-fb-iframe-box {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* REVIEWS SECTION OVERRIDES FOR LIGHT BACKGROUND (#f1f2f4) */
+  .reviews {
+    background-color: #f1f2f4 !important;
+    color: #111827 !important;
+    padding: 4rem 1rem !important;
+  }
+
+  .reviews-bg {
+    display: none !important;
+  }
+  
+  .reviews-scrim {
+    background: transparent !important;
+  }
+
+  .reviews .eyebrow {
+    color: #4b5563 !important;
+  }
+
+  .reviews .h2--on-dark {
+    color: #111827 !important;
+  }
+
+  .google-rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .rating-score {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+  }
+
+  .rating-stars-gold {
+    color: #f59e0b;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  .rating-count {
+    color: #4b5563;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+  }
+  
+  .review-card {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+  }
+
+  .review-stars {
+    color: #f59e0b !important;
+  }
+
+  .review-text {
+    color: #374151 !important;
+  }
+
+  .review-name {
+    color: #111827 !important;
+  }
+
+  .review-source {
+    color: #6b7280 !important;
+  }
+
+  /* Make whole review card clickable */
+  .review-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .review-card-link:hover {
+    transform: translateY(-2px);
+  }
+  .review-card-link:hover .review-card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+  }
+  .review-card-link .review-source {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 850px) {
+    .hero-inner--home {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      padding-top: 4rem;
+    }
+    .hero-panel--home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-lead--home {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["PawnShop","JewelryStore"],"name":"Triple Diamond Pawn and Jewelry","description":"Pawn shop and fine jewelry store in Ocean Springs, MS. Pawn loans, fine jewelry, luxury watches, firearms, gold, silver and coins, custom jewelry design and repair, GIA appraisals and jewelry insurance.","telephone":"+12282734099","email":"kctriplediamond@gmail.com","priceRange":"$$","foundingDate":"2016","address":{"@type":"PostalAddress","streetAddress":"7401 Washington Avenue","addressLocality":"Ocean Springs","addressRegion":"MS","postalCode":"39564","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":30.4324,"longitude":-88.8153},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}],"sameAs":["https://www.facebook.com/TripleDiamondPawn"],"award":"Sun Herald Best of Coastal Mississippi 2026 — Best Pawnshop (Winner), Best Jewelry Store (Silver)"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How does a pawn loan work?","acceptedAnswer":{"@type":"Answer","text":"You bring in an item of value, we evaluate it and make a cash offer on the spot, and you receive money immediately using the item as collateral — no credit check required. Repay the loan within the agreed term and the item is returned to you."}},
+{"@type":"Question","name":"What items can I pawn at Triple Diamond?","acceptedAnswer":{"@type":"Answer","text":"We accept electronics, gold, silver and diamond jewelry, coins, firearms, tools, musical instruments, gaming systems, fine watches, and vehicles like cars, boats, RVs, motorcycles, ATVs, and jet skis."}},
+{"@type":"Question","name":"Do you check my credit for a pawn loan?","acceptedAnswer":{"@type":"Answer","text":"No. Pawn loans are secured by the item itself, so there's no credit check or income verification required."}},
+{"@type":"Question","name":"Is Triple Diamond a pawn shop, a jewelry store, or both?","acceptedAnswer":{"@type":"Answer","text":"Both. We operate as a full-service pawn broker and a jewelry-store-quality showroom for new, pre-owned, and estate fine jewelry, diamonds, and watches."}},
+{"@type":"Question","name":"Do you have an actual jeweler on staff?","acceptedAnswer":{"@type":"Answer","text":"We have a GIA-trained jeweler on staff who personally evaluates, appraises, repairs, and designs jewelry in-house — we don't outsource that work."}},
+{"@type":"Question","name":"Where is Triple Diamond Pawn and Jewelry located?","acceptedAnswer":{"@type":"Answer","text":"We're located at 7401 Washington Avenue, Ocean Springs, MS 39564, easily accessible from Biloxi, Gautier, and the greater Mississippi Gulf Coast."}},
+{"@type":"Question","name":"Does Triple Diamond accept firearms, including semi-automatic weapons?","acceptedAnswer":{"@type":"Answer","text":"Yes, we accept all types of firearms, including semi-automatic firearms, for both pawn loans and outright purchase, with every transaction conducted in full compliance with applicable federal and Mississippi state law."}},
+{"@type":"Question","name":"Do I need an appointment to visit?","acceptedAnswer":{"@type":"Answer","text":"No appointment is required for most pawn, buying, or selling services — walk in during business hours. For appraisals or custom design work, calling ahead is a good idea."}}
+]}
+</script>
+<meta name="robots" content="index,follow" data-fourge-seo=""><meta property="og:type" content="website" data-fourge-seo=""><meta name="twitter:card" content="summary_large_image" data-fourge-seo=""><script type="application/ld+json" data-fourge-seo="">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Site Name"},{"@type":"WebPage","name":"Pawn Shop &amp; Fine Jewelry Store in Ocean Springs, MS | Triple Diamond"}]}</script><meta name="generator" content="Fourge 1.14.131">
+</head>
+<body>
+
+<div class="announcement">
+  Voted Best Pawnshop on the Coast — Sun Herald Best of Coastal Mississippi 2026
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="header-logo" href="/">
+      <img src="uploads/triple-diamond-logo.png" alt="Triple Diamond Pawn &amp; Jewelry">
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a class="nav-link" href="pawn-loans">Pawn Loans</a>
+      <div class="nav-dropdown">
+        <a class="nav-link" href="">Jewelry Appraisals and Repair <span class="nav-caret">▼</span></a>
+        <div class="dropdown-panel">
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="jewelry">Buy &amp; Sell Fine Jewelry</a>
+            <a class="dropdown-link" href="custom-jewelry-repair">Custom Design &amp; Repair</a>
+            <a class="dropdown-link" href="watches">Fine &amp; Luxury Watches</a>
+            <a class="dropdown-link" href="appraisals-insurance">GIA Appraisals &amp; Insurance</a>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="firearms">Firearms</a>
+      
+      <a class="nav-link" href="about">About</a>
+      <a class="nav-link" href="contact">Contact</a>
+      <a class="nav-phone" href="mailto:kctriplediamond@gmail.com">Email Us</a>
+      <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
+    </nav>
+    <div class="header-mobile">
+      <a class="mobile-call" href="mailto:kctriplediamond@gmail.com">Email</a>
+      <a class="mobile-call" href="tel:+12282734099">Call</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="pawn-loans">Pawn Loans</a>
+    <a href="jewelry">Buy &amp; Sell Fine Jewelry</a>
+    <a class="is-sub" href="custom-jewelry-repair">Custom Design &amp; Repair</a>
+    <a class="is-sub" href="watches">Fine &amp; Luxury Watches</a>
+    <a class="is-sub" href="appraisals-insurance">GIA Appraisals &amp; Insurance</a>
+    <a href="firearms">Firearms</a>
+    <a href="gold-silver-coins">Gold, Silver &amp; Coins</a>
+    <a href="about">About</a>
+    <a href="contact">Contact &amp; Location</a>
+    <a href="mailto:kctriplediamond@gmail.com">Email Us</a>
+  </nav>
+</header>
+
+<main>
+<section id="hero" class="hero hero--home">
+  <img class="hero-slide" src="/trilpe-pawn-storeTopazGigapixel2xscale.png" alt="Gold chain necklace on black velvet at Triple Diamond Pawn and Jewelry in Ocean Springs, MS">
+  <img class="hero-slide" src="/trilpe-pawn-storeTopazGigapixel2xscale.png" alt="Diamond and gemstone rings at Triple Diamond Pawn and Jewelry">
+  <img class="hero-slide is-active" src="/trilpe-pawn-storeTopazGigapixel2xscale.png" alt="Vintage record player — electronics and collectibles">
+  <img class="hero-slide" src="/trilpe-pawn-storeTopazGigapixel2xscale.png" alt="Collectible firearms at Triple Diamond Pawn and Jewelry">
+  
+  <div class="hero-inner hero-inner--home">
+    
+    <!-- Text Panel -->
+    <div class="hero-panel hero-panel--home">
+      <p class="eyebrow">Ocean Springs, Mississippi</p>
+      <h1 class="hero-title hero-title--home">Ocean Springs' Trusted Pawn Broker &amp; Fine Jewelry Store</h1>
+      <p class="hero-lead hero-lead--home">Two businesses under one roof: a straightforward, fair pawn shop for fast cash — and a jewelry-store-quality showroom for diamonds, fine jewelry, and luxury watches, backed by a GIA-trained jeweler and 100+ years of combined experience.</p>
+      <div class="btn-row btn-row--hero">
+        <a class="btn" href="tel:+12282734099">Get a Cash Offer</a>
+      </div>
+    </div>
+
+    <!-- Facebook Feed Glassmorphism Panel -->
+    <div class="hero-fb-wrapper">
+      <div class="hero-fb-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.96 3.62 9.08 8.4 9.84v-6.96h-2.52v-2.88h2.52V9.6c0-2.49 1.48-3.87 3.75-3.87 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.88h-2.34v6.96c4.78-.76 8.4-4.88 8.4-9.84 0-5.5-4.46-9.96-9.96-9.96z"></path></svg>
+        Follow Us on Facebook
+      </div>
+      <div class="hero-fb-iframe-box">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTripleDiamondPawn&amp;tabs=timeline&amp;width=340&amp;height=400&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="reviews">
+  <div class="reviews-bg"></div>
+  <div class="reviews-scrim"></div>
+  <div class="reviews-inner">
+    <div class="reviews-head" style="flex-wrap: wrap; gap: 2rem;">
+      <div>
+        <p class="eyebrow eyebrow--tight" style="display: flex; align-items: center; gap: 0.5rem;">
+          <!-- Google Logo SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+          </svg>
+          Google Reviews
+        </p>
+        
+
+        <!-- Google Overall Rating & Rating Count (Static fallback, dynamically updated by API) -->
+        <div class="google-rating-badge" id="google-overall-rating">
+          <div class="rating-score" id="rating-score-val">4.9</div>
+          <div>
+            <div class="rating-stars-gold">★★★★★</div>
+            <div class="rating-count" id="rating-count-val">Based on Google Reviews</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a class="btn btn--sm" href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="background: #111827; color: #ffffff; border-color: #111827;">Read All Reviews</a>
+          <a class="btn btn--sm btn--ink-outline" href="https://search.google.com/local/writereview?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="color: #111827; border-color: #9ca3af;">Leave a Review</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Dynamic Reviews Container -->
+    <div class="reviews-grid" id="google-reviews-grid">
+      <!-- Static Fallback 3 Reviews -->
+      <a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" class="review-card-link" style="order: 0;">
+        <figure class="review-card">
+          <span class="review-stars">★★★★★</span>
+          <blockquote class="review-text">From the moment you walk in, you’re greeted with professionalism, honesty, and exceptional service. Their selection of jewelry is stunning — high-quality pieces at unbeatable prices — and their pawnbroking side is just as impressive. Fair, transparent, and welcoming. Highly recommend!</blockquote>
+          <figcaption class="review-name">OS Chamber <span class="review-source">Google Review</span></figcaption>
+        </figure>
+      </a>
+      <a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" class="review-card-link" style="order: 1;">
+        <figure class="review-card">
+          <span class="review-stars">★★★★★</span>
+          <blockquote class="review-text">Been coming here since 2016!! They are fair, friendly and fantastic!! Wonderful selection of goods and very helpful when in need. Thank you for always being there for us!!</blockquote>
+          <figcaption class="review-name">Barb Orr <span class="review-source">Google Review</span></figcaption>
+        </figure>
+      </a>
+      <a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" class="review-card-link" style="order: 2;">
+        <figure class="review-card">
+          <span class="review-stars">★★★★★</span>
+          <blockquote class="review-text">Really sweet gentlemen that work here. I needed to purchase something for a gift and they were super helpful and prices were reasonable.</blockquote>
+          <figcaption class="review-name">Meghan Beltran <span class="review-source">Google Review</span></figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="section section--light">
+  <div class="container">
+    <h2 class="h2 h2--center">Buy · Sell · Pawn · Trade</h2>
+    <p class="lead-center">If it holds resale value, bring it in. Every item is evaluated on the spot by a team that actually knows what it's looking at—from a gold chain to a loose diamond, a semi-automatic rifle, or a Rolex watch. Our team is GIA-trained and has over 100 years of combined experience.</p>
+    <div class="grid-3 grid-top-gap">
+      <a class="cat-card" href="jewelry">
+        <div class="cat-card-media"><img src="uploads/triple3.webp" alt="Diamond and gemstone rings — fine jewelry in Ocean Springs, MS"><span class="gold-bar"></span></div>
+        <div class="cat-card-body">
+          <h3 class="cat-card-title">Fine Jewelry &amp; Diamonds</h3>
+          <p class="cat-card-text">New, pre-owned &amp; estate jewelry, certified diamonds, engagement rings — priced below traditional retail.</p>
+        </div>
+      </a>
+      <a class="cat-card" href="gold-silver-coins">
+        <div class="cat-card-media"><img src="uploads/triple2.webp" alt="Gold chain — sell gold, silver and coins in Ocean Springs, MS"><span class="gold-bar"></span></div>
+        <div class="cat-card-body">
+          <h3 class="cat-card-title">Gold, Silver &amp; Coins</h3>
+          <p class="cat-card-text">Top value for gold and silver in any condition, bullion, rare coins &amp; collectible currency — paid on the spot.</p>
+        </div>
+      </a>
+      <a class="cat-card" href="firearms">
+        <div class="cat-card-media"><img src="uploads/triple4.webp" alt="Collectible firearms — buy, sell and pawn firearms in Ocean Springs, MS"><span class="gold-bar"></span></div>
+        <div class="cat-card-body">
+          <h3 class="cat-card-title">Firearms</h3>
+          <p class="cat-card-text">Handguns, rifles, shotguns &amp; collectibles — every transaction fully compliant with federal and Mississippi law.</p>
+        </div>
+      </a>
+      <a class="cat-card" href="pawn-loans">
+        <div class="cat-card-media"><img src="uploads/triple5.webp" alt="Vintage record player — electronics, instruments and collectibles"><span class="gold-bar"></span></div>
+        <div class="cat-card-body">
+          <h3 class="cat-card-title">Electronics &amp; Instruments</h3>
+          <p class="cat-card-text">Up-to-date electronics, gaming systems, tools &amp; musical instruments — pawn or sell for fast cash.</p>
+        </div>
+      </a>
+      <a class="cat-card" href="pawn-loans">
+        <div class="cat-card-media"><img src="uploads/triple6.webp" alt="Antique porcelain figurine — antiques and collectibles"><span class="gold-bar"></span></div>
+        <div class="cat-card-body">
+          <h3 class="cat-card-title">Antiques &amp; Collectibles</h3>
+          <p class="cat-card-text">Estate finds, vintage pieces &amp; collectibles, assessed for collector value — never just melt value.</p>
+        </div>
+      </a>
+      <a class="cat-card cat-card--cash" href="tel:+12282734099">
+        <div>
+          <img class="cash-img" src="uploads/money.png" alt="Stacks of hundred-dollar bills">
+          <h3 class="cash-title">Need cash today?</h3>
+          <p class="cash-text">No credit check. No application. Walk in with your item, walk out with cash — and reclaim your item when the loan is repaid.</p>
+        </div>
+        <span class="cash-cta">Contact us — 228-273-4099 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="pawn-loans" class="section section--dark">
+  <div class="container">
+    <div class="split split--even split--start">
+      <div>
+        <p class="eyebrow eyebrow--tight">HOW DOES A PAWN LOAN WORK?</p>
+        <h2 class="h2 h2--on-dark h2--tight">Fast Cash. <span class="text-gold">No Credit Check.</span> Keep Ownership.</h2>
+        <p class="body-text body-text--on-dark">A pawn loan lets you borrow against the value of an item — no long application, no waiting days for approval. Repay the loan and the item is yours again, free and clear. We loan on jewelry, electronics, tools, firearms, instruments, and vehicles including cars, boats, RVs, motorcycles, ATVs, and jet skis.</p>
+        <a class="btn btn--spaced" href="tel:+12282734099">Call 228-273-4099</a>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="step-index">1</span><div><h3 class="step-title">Bring in your item</h3><p class="step-text">Anything of value — plus a valid government-issued ID.</p></div></li>
+        <li class="step"><span class="step-index">2</span><div><h3 class="step-title">Free on-the-spot evaluation</h3><p class="step-text">Our team assesses resale value and condition immediately.</p></div></li>
+        <li class="step"><span class="step-index">3</span><div><h3 class="step-title">Walk out with cash</h3><p class="step-text">No credit check, no income verification — the item is the collateral.</p></div></li>
+        <li class="step"><span class="step-index">4</span><div><h3 class="step-title">Repay &amp; reclaim</h3><p class="step-text">Pay back the loan within the term and your item comes home.</p></div></li>
+    </ol>
+    </div>
+  </div>
+</section>
+
+<section id="jewelry" class="section section--alt">
+  <div class="container split split--image-left">
+    <div class="framed-image framed-image--4-3">
+      <img src="uploads/triple3.webp" alt="Diamond and gemstone rings in the Triple Diamond showroom">
+      <span class="gold-bar gold-bar--thick"></span>
+    </div>
+    <div>
+      <p class="eyebrow--ink">Fine Jewelry</p>
+      <h2 class="h2 h2--mid">A Real Jeweler, Not Just a Counter Clerk</h2>
+      <p class="body-text">Our on-staff, GIA-trained jeweler evaluates every diamond, gemstone, and fine piece that comes through the door — and handles custom design, resizing, restoration, and repair in-house, never outsourced. Sell your jewelry for real market value, or shop new, pre-owned, and estate pieces priced below traditional retail.</p>
+      <ul class="checklist checklist--gap-top">
+        <li>Buy, sell &amp; trade diamonds, gemstones, estate jewelry &amp; luxury watches</li>
+        <li>Custom engagement rings &amp; heirloom redesigns, made in-house</li>
+        <li>GIA appraisals &amp; jewelry insurance in one visit</li>
+        <li>Repairs: resizing, prong retipping, stone setting, chains &amp; clasps</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section section--light">
+  <div class="container split split--image-right">
+    <div>
+      <p class="eyebrow--ink">About Us</p>
+      <h2 class="h2 h2--mid">Voted Best on the Coast</h2>
+      <p class="body-text">Since 2016, Triple Diamond has been built around one principle: fair value, explained clearly. Whether you're pawning a tool to cover a bill or investing in a piece for a milestone anniversary, every customer gets the same respect and transparency — and the Coast has noticed, naming us Best Pawnshop and Silver Place Best Jewelry Store in the Sun Herald's Best of Coastal Mississippi.</p>
+      <p class="body-text body-text--gap-sm">Don't take our word for it — our reputation is public. Read our reviews and follow us on Facebook.</p>
+      <div class="btn-row btn-row--about">
+        <a class="btn btn--ink-outline" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener">Follow on Facebook</a>
+        <a class="btn btn--sm" href="contact">Plan Your Visit</a>
+      </div>
+    </div>
+    <div class="framed-image framed-image--16-10">
+      <img src="uploads/trilpe-pawn-store.jpg" alt="Triple Diamond Pawn and Jewelry storefront at 7401 Washington Avenue, Ocean Springs, MS">
+      <span class="gold-bar gold-bar--thick"></span>
+    </div>
+  </div>
+</section>
+
+<section id="faqs" class="faqs">
+  <div class="faqs-inner">
+    <div class="faqs-head">
+      <h2 class="h2-light h2-light--lg">Questions, Answered</h2>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>How does a pawn loan work?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>You bring in an item of value, we evaluate it and make a cash offer on the spot, and you receive money immediately using the item as collateral — no credit check required. Repay the loan within the agreed term and the item is returned to you.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>What items can I pawn at Triple Diamond?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>We accept electronics, gold, silver and diamond jewelry, coins, firearms, tools, musical instruments, gaming systems, fine watches, and vehicles like cars, boats, RVs, motorcycles, ATVs, and jet skis.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>Do you check my credit for a pawn loan?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>No. Pawn loans are secured by the item itself, so there’s no credit check or income verification required.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>Is Triple Diamond a pawn shop, a jewelry store, or both?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>Both. We operate as a full-service pawn broker and a jewelry-store-quality showroom for new, pre-owned, and estate fine jewelry, diamonds, and watches.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>Do you have an actual jeweler on staff?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>We have a GIA-trained jeweler on staff who personally evaluates, appraises, repairs, and designs jewelry in-house — we don’t outsource that work.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>Does Triple Diamond accept firearms, including semi-automatic weapons?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>Yes, we accept all types of firearms, including semi-automatic firearms, for both pawn loans and outright purchase, with every transaction conducted in full compliance with applicable federal and Mississippi state law.</p></div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false"><span>Do I need an appointment to visit?</span><span class="faq-sign">+</span></button>
+      <div class="faq-answer"><p>No appointment is required for most pawn, buying, or selling services — walk in during business hours. For appraisals or custom design work on complex pieces, calling ahead is a good idea.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section section--dark section--dark-open">
+  <div class="container visit-grid">
+    <div>
+      <p class="eyebrow eyebrow--tight">Visit Us</p>
+      <h2 class="h2 h2--on-dark h2--tight">Stop In &amp; See Why We're <span class="text-gold">Voted Best</span></h2>
+      <div class="info-list">
+        <div>
+          <p class="info-label">Address</p>
+          <p class="info-value">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
+          <p class="info-note">Minutes from Biloxi &amp; Gautier · On-site parking</p>
+        </div>
+        <div>
+          <p class="info-label">Hours</p>
+          <p class="info-value">Monday – Friday: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
+        </div>
+        <div>
+          <p class="info-label">Contact</p>
+          <p class="info-value"><a class="info-link" href="tel:+12282734099">228-273-4099</a><br><a class="fb-badge fb-badge--link" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener" aria-label="Triple Diamond on Facebook">f</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps?q=Triple+Diamond+Pawn+and+Jewelry,+7401+Washington+Avenue,+Ocean+Springs,+MS+39564&amp;output=embed" width="100%" height="480" loading="lazy" title="Map to Triple Diamond Pawn and Jewelry, 7401 Washington Avenue, Ocean Springs, MS"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img class="footer-logo" src="uploads/triple-diamond-logo.png" alt="Triple Diamond Pawn &amp; Jewelry">
+      <p class="footer-about">Ocean Springs' trusted pawn broker and fine jewelry store since 2016 — fair value, explained clearly, backed by 100+ years of combined experience and a GIA-trained jeweler on staff.</p>
+      <a class="footer-fb" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener" aria-label="Triple Diamond on Facebook">f</a>
+    </div>
+    <div>
+      <p class="footer-heading">Services</p>
+      <nav class="footer-nav" aria-label="Footer services">
+        <a href="pawn-loans">Pawn Loans</a>
+        <a href="jewelry">Buy &amp; Sell Jewelry</a>
+        <a href="custom-jewelry-repair">Custom Design &amp; Repair</a>
+        <a href="watches">Fine &amp; Luxury Watches</a>
+        <a href="firearms">Firearms</a>
+        <a href="gold-silver-coins">Gold, Silver &amp; Coins</a>
+        <a href="appraisals-insurance">GIA Appraisals &amp; Insurance</a>
+      </nav>
+    </div>
+    <div>
+      <p class="footer-heading">Visit</p>
+      <p class="footer-text">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
+      <p class="footer-text"><a class="footer-phone" href="tel:+12282734099">(228) 273-4099</a></p>
+      <p class="footer-text footer-text--last">Mon–Fri: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
+      <a class="footer-about-link" href="about">About Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-legal">© 2026 Triple Diamond Pawn and Jewelry</p>
+      <p class="footer-legal"><a href="#">Privacy Policy</a> · Site by <a href="https://stmmdigital.com/" target="_blank" rel="noopener">STMM Digital</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer=""></script>
+
+<!-- Script to Fetch Dynamic Google Reviews and Store Rating using Places API (New) -->
+<script>
+  async function fetchGoogleReviews() {
+    const placeId = 'ChIJTfaTT8ELnIgRYQwfpmq-E9Q';
+    
+    try {
+      const place = new google.maps.places.Place({ id: placeId });
+
+      // Request overall rating, total review count, and individual reviews
+      await place.fetchFields({
+        fields: ['rating', 'userRatingCount', 'reviews']
+      });
+
+      // 1. Update Overall Google Rating & Count dynamically
+      if (place.rating) {
+        document.getElementById('rating-score-val').textContent = place.rating.toFixed(1);
+      }
+      if (place.userRatingCount) {
+        document.getElementById('rating-count-val').textContent = `Based on ${place.userRatingCount} Google Reviews`;
+      }
+
+      // 2. Render 3 5-star reviews
+      if (place.reviews && place.reviews.length > 0) {
+        const topReviews = place.reviews.filter(review => review.rating === 5).slice(0, 3);
+        
+        if (topReviews.length > 0) {
+          const container = document.getElementById('google-reviews-grid');
+          container.innerHTML = ''; 
+          
+          topReviews.forEach((review, index) => {
+            const link = document.createElement('a');
+            link.href = `https://search.google.com/local/reviews?placeid=${placeId}`;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.className = 'review-card-link';
+            link.style.order = index;
+            
+            const reviewText = review.text || '';
+            const authorName = review.authorAttribution ? review.authorAttribution.displayName : 'Google User';
+            
+            link.innerHTML = `
+              <figure class="review-card">
+                <span class="review-stars">★★★★★</span>
+                <blockquote class="review-text">${reviewText}</blockquote>
+                <figcaption class="review-name">${authorName} <span class="review-source">Google Review</span></figcaption>
+              </figure>
+            `;
+            
+            container.appendChild(link);
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching Google Reviews:", error);
+    }
+  }
+</script>
+
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyHG545C61yHv5h1eVDClXrPNnxoSO_T8&amp;v=weekly&amp;libraries=places&amp;callback=fetchGoogleReviews"></script>
+
+</body></html>
