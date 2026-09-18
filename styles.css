@@ -185,11 +185,12 @@ main{display:block}
 .eyebrow--tight{margin:0 0 14px}
 .eyebrow--ink,.eyebrow-light{margin:0 0 14px;font-family:'Archivo',sans-serif;font-stretch:115%;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--slate)}
 
-.hero-title{margin:0;font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.2vw + 18px,49px);line-height:1;color:var(--brand-color-secondary);text-wrap:balance;text-wrap:pretty}
+.hero-title{margin:0;font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.2vw + 18px,49px);line-height:1;color:var(--brand-color-secondary);text-wrap:balance}
 .hero-title--48{font-size:clamp(26px,2.2vw + 18px,48px)}
 .hero-title--tall{line-height:1.02}
 .hero-title--720{max-width:720px}
-.hero-title--home{max-width:760px;font-size:clamp(27px,2.3vw + 18px,51px);letter-spacing:.005em}
+/* Home headline shares its row with the Facebook panel, so it scales a step smaller. */
+.hero-title--home{max-width:760px;font-size:clamp(27px,2vw + 14px,51px);letter-spacing:.005em}
 .hero-lead{margin:22px 0 0;max-width:560px;font-size:clamp(15.5px,.4vw + 14px,17px);line-height:1.7;color:var(--ink)}
 .hero-lead--home{line-height:1.65}
 .hero-lead--600{max-width:600px}
@@ -198,7 +199,7 @@ main{display:block}
 .hero-lead--contact{margin:22px 0 0;max-width:640px}
 
 /* ---------------------------------------------------------- typography --- */
-.h2{margin:0;font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(24px,1.6vw + 18px,41px);line-height:1.05;color:var(--brand-color-secondary);text-wrap:balance;text-wrap:pretty}
+.h2{margin:0;font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(24px,1.6vw + 18px,41px);line-height:1.05;color:var(--brand-color-secondary);text-wrap:balance}
 .h2--center{text-align:center}
 .h2--on-dark{color:var(--brand-color-secondary)}
 .h2--tight{line-height:1.02}
@@ -500,6 +501,8 @@ main{display:block}
   .checklist--two-col{grid-template-columns:1fr}
   .hero--home{min-height:0}
   .hero-inner--home{padding-top:clamp(44px,10vw,56px)}
+  /* Archivo Expanded is wide: keep phone headlines to a few lines. */
+  .hero-title,.hero-title--home{font-size:clamp(23px,5.2vw + 6px,27px);line-height:1.04}
   .cash-img{width:min(140px,45%)}
   .link-card{padding:20px}
   .btn-row > .btn{flex:1 1 auto}
