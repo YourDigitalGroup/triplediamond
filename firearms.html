@@ -15,6 +15,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <div class="announcement">
   Voted Best Pawnshop on the Coast — Sun Herald Best of Coastal Mississippi 2026
 </div>
@@ -22,13 +24,13 @@
 <header class="site-header" data-feid="f2_mu7donkm">
   <div class="header-inner">
     <a class="header-logo" href="/">
-      <img src="uploads/triple-diamond-logo.png" alt="Triple Diamond Pawn &amp; Jewelry">
+      <img src="images/triple-diamond-logo.png" width="480" height="235" alt="Triple Diamond Pawn &amp; Jewelry">
     </a>
     <nav class="primary-nav" aria-label="Primary">
       <a class="nav-link" href="pawn-loans">Pawn Loans</a>
       <div class="nav-dropdown">
-        <a class="nav-link" href="">Jewelry Appraisals and Repair <span class="nav-caret">▼</span></a>
-        <div class="dropdown-panel">
+        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="jewelry-menu">Jewelry Appraisals and Repair <span class="nav-caret" aria-hidden="true">▼</span></button>
+        <div class="dropdown-panel" id="jewelry-menu">
           <div class="dropdown-menu">
             <a class="dropdown-link" href="jewelry">Buy &amp; Sell Fine Jewelry</a>
             <a class="dropdown-link" href="custom-jewelry-repair">Custom Design &amp; Repair</a>
@@ -38,16 +40,15 @@
         </div>
       </div>
       <a class="nav-link" href="firearms">Firearms</a>
-      
       <a class="nav-link" href="about">About</a>
       <a class="nav-link" href="contact">Contact</a>
       <a class="nav-phone" href="mailto:kctriplediamond@gmail.com">Email Us</a>
       <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
     </nav>
     <div class="header-mobile">
-      <a class="mobile-call" href="mailto:kctriplediamond@gmail.com">Email</a>
-      <a class="mobile-call" href="tel:+12282734099">Call</a>
-      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+      <a class="mobile-call mobile-call--email" href="mailto:kctriplediamond@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 3.2V17h16V8.2l-8 5.3-8-5.3zM5.4 7l6.6 4.4L18.6 7H5.4z"/></svg><span class="mobile-call-label">Email</span></a>
+      <a class="mobile-call mobile-call--phone" href="tel:+12282734099"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg><span class="mobile-call-label">Call</span></a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span aria-hidden="true">☰</span></button>
     </div>
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
@@ -64,7 +65,7 @@
   </nav>
 </header>
 
-<main>
+<main id="main">
 <section id="hero" class="hero">
   <div class="hero-media hero-media--firearms"></div>
   <div class="hero-inner">
@@ -108,10 +109,10 @@
 <section id="gallery" class="section section--flush-top section--light">
   <div class="container">
     <div class="gallery">
-      <figure class="gallery-item obj-0"><img src="uploads/triple/guns-ce2c515f.webp" alt="Semi-automatic pistols at Triple Diamond Pawn and Jewelry"><span class="gold-bar"></span></figure>
-      <figure class="gallery-item obj-35"><img src="/moreriflesandgunsandbowstriplediamondpawn.jpg" alt="Handguns in the display case at Triple Diamond"><span class="gold-bar"></span></figure>
-      <figure class="gallery-item obj-65"><img src="/riflesandgunstriplediamondpawn.jpg" alt="Pistols available at Triple Diamond Pawn and Jewelry"><span class="gold-bar"></span></figure>
-      <figure class="gallery-item obj-100"><img src="/collectiblehandguns.jpg" alt="Collectible firearms at Triple Diamond"><span class="gold-bar"></span></figure>
+      <figure class="gallery-item obj-0"><img src="uploads/triple/guns-ce2c515f.webp" alt="Semi-automatic pistols at Triple Diamond Pawn and Jewelry" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
+      <figure class="gallery-item obj-35"><img src="images/firearms-handguns-1200.webp" width="1200" height="900" alt="Handguns in the display case at Triple Diamond" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
+      <figure class="gallery-item obj-65"><img src="images/firearms-rifles-1200.webp" width="1200" height="900" alt="Pistols available at Triple Diamond Pawn and Jewelry" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
+      <figure class="gallery-item obj-100"><img src="images/firearms-collectible-1200.webp" width="1200" height="900" alt="Collectible firearms at Triple Diamond" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
     </div>
   </div>
 </section>
@@ -178,7 +179,7 @@
 <footer class="site-footer" data-feid="f4_mu7d7ghg">
   <div class="footer-inner">
     <div>
-      <img class="footer-logo" src="uploads/triple-diamond-logo.png" alt="Triple Diamond Pawn &amp; Jewelry">
+      <img class="footer-logo" src="images/triple-diamond-logo.png" width="480" height="235" loading="lazy" alt="Triple Diamond Pawn &amp; Jewelry">
       <p class="footer-about">Ocean Springs' trusted pawn broker and fine jewelry store since 2016 — fair value, explained clearly, backed by 100+ years of combined experience and a GIA-trained jeweler on staff.</p>
       <a class="footer-fb" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener" aria-label="Triple Diamond on Facebook">f</a>
     </div>
