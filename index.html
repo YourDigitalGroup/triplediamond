@@ -256,6 +256,7 @@
     min-width: 180px;
     max-width: 220px;
     flex: 1 1 180px;
+    box-sizing: border-box;
   }
 
   .partner-logo {
@@ -305,22 +306,42 @@
     gap: 0.75rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+    width: fit-content;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 4px 6px 4px 0;
+  }
+
+  .google-rating-badge:hover .rating-count,
+  .google-rating-badge:focus-visible .rating-count {
+    text-decoration: underline;
+    color: #111827;
   }
 
   .rating-score {
+    display: block;
     font-size: 2.25rem;
     font-weight: 800;
     color: #111827;
     line-height: 1;
   }
 
+  /* Stars fill to the live rating (--rating is a percentage set by the Places script). */
   .rating-stars-gold {
+    display: block;
     color: #f59e0b;
     font-size: 1.25rem;
     letter-spacing: 2px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #f59e0b var(--rating, 100%), #d1d5db var(--rating, 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .rating-count {
+    display: block;
     color: #4b5563;
     font-size: 0.9rem;
     margin-top: 0.2rem;
@@ -413,6 +434,9 @@
       max-width: 100%;
       flex: 1 1 100%;
     }
+    .hero-title--home {
+      font-size: 1.3rem;
+    }
     .hero-badges-row {
       justify-content: center;
     }
@@ -448,7 +472,7 @@
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["PawnShop","JewelryStore"],"name":"Triple Diamond Pawn and Jewelry","description":"Pawn shop and fine jewelry store in Ocean Springs, MS. Pawn loans, fine jewelry, luxury watches, firearms, gold, silver and coins, custom jewelry design and repair, GIA appraisals and jewelry insurance.","telephone":"+12282734099","email":"kctriplediamond@gmail.com","priceRange":"$$","foundingDate":"2016","address":{"@type":"PostalAddress","streetAddress":"7401 Washington Avenue","addressLocality":"Ocean Springs","addressRegion":"MS","postalCode":"39564","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":30.4324,"longitude":-88.8153},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}],"sameAs":["https://www.facebook.com/TripleDiamondPawn"],"award":"Sun Herald Best of Coastal Mississippi 2026 — Best Pawnshop (Winner), Best Jewelry Store (Silver)"}
+{"@context":"https://schema.org","@type":["PawnShop","JewelryStore"],"name":"Triple Diamond Pawn and Jewelry","description":"Pawn shop and fine jewelry store in Ocean Springs, MS. Pawn loans, fine jewelry, luxury watches, firearms, gold, silver and coins, custom jewelry design and repair, GIA appraisals and jewelry insurance.","telephone":"+12282734099","email":"kctriplediamond@gmail.com","priceRange":"$$","foundingDate":"2016","address":{"@type":"PostalAddress","streetAddress":"7401 Washington Avenue","addressLocality":"Ocean Springs","addressRegion":"MS","postalCode":"39564","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":30.4324,"longitude":-88.8153},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}],"sameAs":["https://www.facebook.com/TripleDiamondPawn"],"award":"Sun Herald Best of Coastal Mississippi 2026 — Best Pawnshop (Winner), Best Jewelry Store (Silver)"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -569,13 +593,13 @@
     
     <div class="hero-panel hero-panel--home">
       <p class="eyebrow">Ocean Springs, Mississippi</p>
-      <h1 class="hero-title hero-title--home">VOTED #1 PAWNSHOP ON THE MISSISSIPPI GULFCOAST-SunHearld-WXXV VCA Awards</h1>
+      <h1 class="hero-title hero-title--home">Voted #1 Pawnshop on the Mississippi Gulf Coast — Sun Herald &amp; WXXV VCA Awards</h1>
       
       <div class="hero-badges-row">
-        <img src="21272.jpg" alt="Sun Herald 2026 Winner Best of Coastal Mississippi - Triple Diamond Pawn &amp; Jewelry" class="sunherald-hero-logo">
+        <img src="images/21272-sunherald-winner-600.webp" alt="Sun Herald 2026 Winner Best of Coastal Mississippi - Triple Diamond Pawn &amp; Jewelry" class="sunherald-hero-logo">
         <img src="21007.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="sunherald-hero-logo"><img src="/award.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="sunherald-hero-logo">
-        <img src="21439.png" alt="Locally Owned &amp; Operated" class="hero-badge-img">
-        <img src="https://dev.triplediamond.fourge.com/20372.jpg" alt="I Love OS Winner" class="hero-badge-img">
+        <img src="images/21439-locally-owned-300.webp" alt="Locally Owned &amp; Operated" class="hero-badge-img">
+        <img src="/20372.jpg" alt="I Love OS Winner" class="hero-badge-img">
         <img src="15996.png" alt="Mississippi Pawnbrokers Association Member" class="hero-badge-img">
         <div class="spanish-badge">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
@@ -603,6 +627,23 @@
   </div>
 </section>
 
+<section id="directions" class="directions" aria-label="Location and driving directions">
+  <div class="container directions-inner">
+    <div class="directions-info">
+      <p class="eyebrow eyebrow--tight">Find Us</p>
+      <h2 class="h2-card h2-card--gap-sm">7401 Washington Avenue, Ocean Springs</h2>
+      <p class="directions-text">Minutes from Biloxi, Gautier and Gulfport, with on-site parking. Mon–Fri 9 AM – 5 PM · Sat 9 AM – 3 PM · Closed Sunday.</p>
+      <div class="btn-row">
+        <a class="btn btn--sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Triple+Diamond+Pawn+and+Jewelry,+7401+Washington+Avenue,+Ocean+Springs,+MS+39564" target="_blank" rel="noopener">Get Driving Directions</a>
+        <a class="btn btn--sm btn--ink-outline" href="tel:+12282734099">Call 228-273-4099</a>
+      </div>
+    </div>
+    <div class="map-frame directions-map">
+      <iframe src="https://www.google.com/maps?q=Triple+Diamond+Pawn+and+Jewelry,+7401+Washington+Avenue,+Ocean+Springs,+MS+39564&amp;output=embed" width="100%" height="300" loading="lazy" title="Map and driving directions to Triple Diamond Pawn and Jewelry, 7401 Washington Avenue, Ocean Springs, MS"></iframe>
+    </div>
+  </div>
+</section>
+
 <section class="partners-text-banner" aria-label="Trusted Partners and Affiliations">
   <div class="partners-text-container">
     <p class="partners-text-label">Our Trusted Partners &amp; Affiliations</p>
@@ -614,7 +655,10 @@
         <img src="/25185.jpg" alt="Diamond Council of America Logo" class="partner-logo">
       </div>
       <div class="partner-badge">
-        <img src="R.gif" alt="Jewelers Vigilance Committee Logo" class="partner-logo">
+        <img src="images/Jewelers_Vigilance_Committee_JVC.gif" width="243" height="78" alt="Jewelers Vigilance Committee Logo" class="partner-logo">
+      </div>
+      <div class="partner-badge">
+        <img src="images/25308-jewelers-mutual.webp" width="620" height="268" alt="Jewelers Mutual Insurance Company Logo" class="partner-logo">
       </div>
       <div class="partner-badge">
         <img src="20372.jpg" alt="Ocean Springs Chamber Logo" class="partner-logo">
@@ -643,25 +687,26 @@
         </p>
         
 
-        <div class="google-rating-badge" id="google-overall-rating">
-          <div class="rating-score" id="rating-score-val">4.5</div>
-          <div>
-            <div class="rating-stars-gold">★★★★★</div>
-            <div class="rating-count" id="rating-count-val">Based on 79 Google Reviews</div>
-          </div>
-        </div>
+        <a class="google-rating-badge" id="google-overall-rating" href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" aria-label="Rated 4.5 out of 5 on Google — read our Google reviews">
+          <span class="rating-score" id="rating-score-val">4.5</span>
+          <span>
+            <span class="rating-stars-gold" id="rating-stars" style="--rating: 90%" aria-hidden="true">★★★★★</span>
+            <span class="rating-count" id="rating-count-val">Based on 79 Google Reviews</span>
+          </span>
+        </a>
 
         <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
           <a class="btn btn--sm" href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="background: #111827; color: #ffffff; border-color: #111827;">Read All Reviews</a>
-          <a class="btn btn--sm btn--ink-outline" href="https://search.google.com/local/writereview?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="color: #111827; border-color: #9ca3af;">Leave a Review</a>
+          <a class="btn btn--sm btn--ink-outline" href="https://search.google.com/local/writereview?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="color: #111827; border-color: #9ca3af;">Leave Us a Review</a>
           <a class="btn btn--sm" href="mailto:kctriplediamond@gmail.com?subject=Inquiry%20from%20Website" style="background: #d4af37; color: #111827; border-color: #d4af37; font-weight: 700;">Leave Us a Message</a>
         </div>
       </div>
 
       <div class="reviews-awards-container">
-        <img src="/212721.jpg" alt="SunHerald 2026 Winner Best of Coastal Mississippi" class="review-award-img">
-        <img src="/award.png" alt="WXXV 25 Viewer's Choice Awards Winner - Best Local Pawn Shop - Triple Diamond Pawn" class="review-award-img">
-        <img src="/2025-12-064.jpg" alt="BusinessRate 2025 Best Pawn Shop Jackson County" class="review-award-img">
+        <img src="images/21272-sunherald-winner-600.webp" width="600" height="915" alt="Sun Herald 2026 Winner Best of Coastal Mississippi — Triple Diamond Pawn &amp; Jewelry" class="review-award-img" loading="lazy" decoding="async">
+        <img src="/award.png" alt="WXXV 25 Viewer's Choice Awards Winner - Best Local Pawn Shop - Triple Diamond Pawn" class="review-award-img" loading="lazy" decoding="async">
+        <img src="images/25193-sunherald-winners-600.webp" width="600" height="900" alt="Sun Herald: Let's cheer for the winners — Triple Diamond Pawn and Jewelry voted Best of Coastal Mississippi 2026 for Pawnshop and Jewelry Store" class="review-award-img" loading="lazy" decoding="async">
+        <img src="images/2025-12-06%20(4).jpg" width="360" height="270" alt="BusinessRate 2025 Best Pawn Shop Jackson County" class="review-award-img" loading="lazy" decoding="async">
       </div>
     </div>
     
@@ -694,7 +739,7 @@ You won’t be disappointed.</blockquote>
 <section id="categories" class="section section--light">
   <div class="container">
     <h2 class="h2 h2--center">BUY · SELL · PAWN</h2>
-    <p class="lead-center">If it holds resale value, bring it in. Every item is evaluated on the spot by a team that actually knows what it's looking at—from a gold chain to a loose diamond, a semi-automatic rifle, or a Rolex watch. Our team is GIA-trained and has over 100 years of combined experience.</p>
+    <p class="lead-center">If it holds resale value, bring it in. Every item is evaluated on the spot by a team that actually knows what it's looking at—from a gold chain to a loose diamond, a semi-automatic rifle, or a Rolex watch. Our GIA-trained team brings over 100 years of combined experience across jewelry, watches (including Rolex), and firearms.</p>
     <div class="grid-3 grid-top-gap">
       <a class="cat-card" href="jewelry">
         <div class="cat-card-media"><img src="/25196.jpg" alt="Diamond and gemstone rings — fine jewelry in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
@@ -733,9 +778,10 @@ You won’t be disappointed.</blockquote>
       </a>
       <a class="cat-card cat-card--cash" href="tel:+12282734099">
         <div>
-          <img class="cash-img" src="images/money-340.webp" width="340" height="230" alt="Stacks of hundred-dollar bills" loading="lazy" decoding="async">
+          <img class="cash-img cash-img--notary" src="images/notary-services-900.webp" width="900" height="715" alt="State of Mississippi Notary Public Commission — we offer notary services at Triple Diamond" loading="lazy" decoding="async">
           <h3 class="cash-title">Need cash today?</h3>
           <p class="cash-text">No credit check. No application. Walk in with your item, walk out with cash — and reclaim your item when the loan is repaid.</p>
+          <p class="cash-note">We Offer Notary Services</p>
         </div>
         <span class="cash-cta">Contact us — 228-273-4099 →</span>
       </a>
@@ -766,7 +812,7 @@ You won’t be disappointed.</blockquote>
   <div class="container split split--image-left">
     <div>
       <div class="framed-image framed-image--4-3">
-        <img src="https://dev.triplediamond.fourge.com/25203.jpg" alt="Diamond and gemstone rings in the Triple Diamond showroom" loading="lazy" decoding="async">
+        <img src="/25203.jpg" alt="Diamond and gemstone rings in the Triple Diamond showroom" loading="lazy" decoding="async">
         <span class="gold-bar gold-bar--thick"></span>
       </div>
       <p style="margin-top: 0.75rem; font-weight: 600; color: #111827; font-size: 0.95rem;">Partner, Ken KC Conn-GIA-DCA-AJP-JVC-ADG trained</p>
@@ -794,10 +840,9 @@ You won’t be disappointed.</blockquote>
       <p class="body-text body-text--gap-sm">Don't take our word for it — our reputation is public. Read our reviews and follow us on Facebook. Stop in today and see the difference .</p>
       <div class="btn-row btn-row--about">
         <a class="btn btn--ink-outline" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener">Follow on Facebook</a>
-        <a class="btn btn--sm" href="contact">Plan Your Visit</a>
       </div>
       <div class="about-awards-row">
-        <img src="21272.jpg" alt="Sun Herald 2026 Winner Best of Coastal Mississippi - Triple Diamond Pawn &amp; Jewelry" class="about-award-logo">
+        <img src="images/21272-sunherald-winner-600.webp" alt="Sun Herald 2026 Winner Best of Coastal Mississippi - Triple Diamond Pawn &amp; Jewelry" class="about-award-logo">
         <img src="21007.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="about-award-logo">
         <img src="/award.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="about-award-logo">
       </div>
@@ -871,6 +916,40 @@ You won’t be disappointed.</blockquote>
     </div>
   </div>
 </section>
+
+<section id="community" class="section section--light community">
+  <div class="container">
+    <p class="eyebrow--ink text-center">Community Involvement &amp; News</p>
+    <h2 class="h2 h2--center">Part of the Coast Since 2016</h2>
+    <p class="lead-center">Awards, memberships and the local causes we show up for. Check back for the latest from the shop.</p>
+    <div class="grid-3 grid-top-gap news-grid">
+      <article class="news-card">
+        <div class="news-card-media"><img src="images/21272-sunherald-winner-600.webp" width="600" height="915" alt="Sun Herald 2026 Winner Best of Coastal Mississippi plaque" loading="lazy" decoding="async"></div>
+        <div class="news-card-body">
+          <p class="news-card-kicker">Awards</p>
+          <h3 class="news-card-title">Voted Best Pawnshop Two Years Running</h3>
+          <p class="news-card-text">Sun Herald's Best of Coastal Mississippi 2026 named us Best Pawnshop and Silver winner for Best Jewelry Store, and WXXV Viewers' Choice Awards picked us as Best Local Pawn Shop.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-media"><img src="/25186.jpg" alt="Kenneth KC Conn receiving the Mississippi Pawnbrokers Association Pawnbroker of the Year 2026 award" loading="lazy" decoding="async"></div>
+        <div class="news-card-body">
+          <p class="news-card-kicker">Recognition</p>
+          <h3 class="news-card-title">Pawnbroker of the Year 2026</h3>
+          <p class="news-card-text">Partner Kenneth "KC" Conn was named Pawnbroker of the Year by the Mississippi Pawnbrokers Association.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-media"><img src="images/25187-certified-local-800.webp" width="800" height="800" alt="Certified local business — Locally Owned &amp; Operated by American Operator" loading="lazy" decoding="async"></div>
+        <div class="news-card-body">
+          <p class="news-card-kicker">Community</p>
+          <h3 class="news-card-title">Locally Owned, Chamber Proud</h3>
+          <p class="news-card-text">We're members of the Ocean Springs and D'Iberville/St. Martin Chambers of Commerce and the Mississippi Pawnbrokers Association. Have a sponsorship or community event in mind? <a class="inline-link" href="mailto:kctriplediamond@gmail.com">Email us</a>.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">
@@ -883,8 +962,8 @@ You won’t be disappointed.</blockquote>
       <div class="footer-badges-wrapper">
         <p class="footer-badges-title">Proud Members of:</p>
         <div class="footer-badges">
-          <img src="21439.png" alt="Locally Owned &amp; Operated - Triple Diamond Pawn &amp; Jewelry" class="footer-badge-img">
-          <img src="https://dev.triplediamond.fourge.com/20372.jpg" alt="Great American Main Street Award Winner - I Love OS" class="footer-badge-img">
+          <img src="images/21439-locally-owned-300.webp" alt="Locally Owned &amp; Operated - Triple Diamond Pawn &amp; Jewelry" class="footer-badge-img">
+          <img src="/20372.jpg" alt="Great American Main Street Award Winner - I Love OS" class="footer-badge-img">
           <img src="15996.png" alt="Mississippi Pawnbrokers Association Member" class="footer-badge-img">
           <img src="Gemological-Institute-of-America-GIA-Logo-Vector.svg--300x84.png" alt="Gemological Institute of America - GIA" class="footer-badge-img">
           <img src="24204.jpg" alt="D'Iberville/St. Martin Chamber of Commerce" class="footer-badge-img">
@@ -936,6 +1015,10 @@ You won’t be disappointed.</blockquote>
       // 1. Update Overall Google Rating & Count dynamically
       if (place.rating) {
         document.getElementById('rating-score-val').textContent = place.rating.toFixed(1);
+        const stars = document.getElementById('rating-stars');
+        if (stars) stars.style.setProperty('--rating', Math.round(place.rating / 5 * 100) + '%');
+        const badge = document.getElementById('google-overall-rating');
+        if (badge) badge.setAttribute('aria-label', `Rated ${place.rating.toFixed(1)} out of 5 on Google — read our Google reviews`);
       }
       if (place.userRatingCount) {
         document.getElementById('rating-count-val').textContent = `Based on ${place.userRatingCount} Google Reviews`;

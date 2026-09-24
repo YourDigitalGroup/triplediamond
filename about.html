@@ -60,7 +60,7 @@
   @media (min-width: 900px) {
     #hero .hero-inner {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       gap: 3rem;
     }
   }
@@ -93,6 +93,13 @@
     margin-bottom: 1rem !important;
   }
 
+  @media (max-width: 640px) {
+    #hero .hero-title--tall {
+      font-size: 1.5rem !important;
+      line-height: 1.15 !important;
+    }
+  }
+
   #hero .hero-lead--640 {
     font-size: 0.98rem !important;
     line-height: 1.6 !important;
@@ -100,15 +107,25 @@
     margin: 0 !important;
   }
 
-  /* Clean Award Image Container */
+  /* Clean Award Image Container — half size, pinned to the top right of the hero */
   .hero-award-card {
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
-    max-width: 400px;
+    max-width: 200px;
     width: 100%;
+    align-self: flex-start;
+    margin-left: auto;
+  }
+
+  @media (max-width: 899px) {
+    .hero-award-card {
+      max-width: 170px;
+      align-self: flex-end;
+      margin-top: -0.75rem;
+    }
   }
 
   .hero-award-card img {
@@ -261,6 +278,7 @@
       <p class="eyebrow">About Us · Ocean Springs, Since 2016</p>
       <h1 class="hero-title hero-title--tall">Over 100 Years of Combined Experience, One Local Shop</h1>
       <p class="hero-lead hero-lead--640">We built a store with one thing in mind. Professionalism, honesty, understanding to our customer's needs. All that with a 100-year combined knowledgeable team.</p>
+      <a class="btn btn--sm btn--spaced" href="#team">Meet Our Team</a>
     </div>
     
     <div class="hero-award-card">
@@ -291,7 +309,32 @@
       <div class="card card--pad-md"><h3 class="card-title">Depth of Expertise</h3><p class="card-text">Most pawn shops have one or two people who "know jewelry." We built our entire team around it. Our partners have over 100 years of combined experience. </p></div>
       <div class="card card--pad-md"><h3 class="card-title">40 year experienced JEWELER ON STAFF</h3><p class="card-text">Our jeweler handles appraisals, custom design, and repair in-house — not an outside contractor.</p></div>
       <div class="card card--pad-md"><h3 class="card-title">Reputation You Can Check</h3><p class="card-text">We'd rather you read our Google Reviews and <a class="inline-link" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener">Facebook page</a> than take our word for it.</p></div>
-      <div class="card card--pad-md"><h3 class="card-title">SERVING THE GULF COAST</h3><p class="card-text">Everyone leaves knowing both sides of the business — pawn and jewelry — are equally serious.</p></div>
+      <div class="card card--pad-md"><h3 class="card-title">Check Out Our Rare Antiquities</h3><p class="card-text">We buy, sell and evaluate rare antiques and collectibles. Photos and details on 10–15 of our rarest pieces are coming soon — check back, or stop in to see them in person.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section section--flush-top section--light">
+  <div class="container">
+    <h2 class="h2-light section-heading-gap-sm">Meet Our Team</h2>
+    <p class="lead-center lead-center--sub">Over 100 years of combined pawn, jewelry, gemology and watch experience under one roof.</p>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-photo"><img src="/25203.jpg" alt="Ken “KC” Conn, Partner at Triple Diamond Pawn and Jewelry" loading="lazy" decoding="async"></div>
+        <div class="team-body">
+          <h3 class="team-name">Ken “KC” Conn</h3>
+          <p class="team-role">Partner · GIA-trained Gemologist &amp; Appraiser</p>
+          <p class="team-text">GIA, DCA, AJP, JVC and ADG trained, and the Mississippi Pawnbrokers Association's Pawnbroker of the Year 2026. KC personally evaluates, appraises and designs jewelry in-house.</p>
+        </div>
+      </article>
+      <article class="team-card">
+        <div class="team-photo team-photo--empty" aria-hidden="true"><span>Photo coming soon</span></div>
+        <div class="team-body">
+          <h3 class="team-name">More of the Team</h3>
+          <p class="team-role">Jewelers, pawnbrokers &amp; firearms specialists</p>
+          <p class="team-text">Profiles of the rest of our 100-year team are on the way. Stop in and say hello in the meantime.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -343,7 +386,7 @@
   <div class="cta-inner">
     <div class="voted-header-container">
       <img src="/unnamed3.png" alt="Triple Diamond Pawn &amp; Jewelry Voted Best Local Pawnshop Logo" class="voted-logo-side">
-      <h2 class="cta-title" style="margin: 0;">COME SEE WHY THE COAST VOTED US BEST!</h2>
+      <h2 class="cta-title" style="margin: 0;">VOTED US #1 TWO YEARS RUNNING!</h2>
       <img src="/unnamed3.png" alt="Triple Diamond Pawn &amp; Jewelry Voted Best Local Pawnshop Logo" class="voted-logo-side">
     </div>
     <div class="btn-row">
@@ -364,8 +407,8 @@
       <div class="footer-badges-wrapper">
         <p class="footer-badges-title">Proud Members of:</p>
         <div class="footer-badges">
-          <img src="21439.png" alt="Locally Owned &amp; Operated - Triple Diamond Pawn &amp; Jewelry" class="footer-badge-img">
-          <img src="https://dev.triplediamond.fourge.com/20372.jpg" alt="Great American Main Street Award Winner - I Love OS" class="footer-badge-img">
+          <img src="images/21439-locally-owned-300.webp" alt="Locally Owned &amp; Operated - Triple Diamond Pawn &amp; Jewelry" class="footer-badge-img">
+          <img src="/20372.jpg" alt="Great American Main Street Award Winner - I Love OS" class="footer-badge-img">
           <img src="15996.png" alt="Mississippi Pawnbrokers Association Member" class="footer-badge-img">
           <img src="Gemological-Institute-of-America-GIA-Logo-Vector.svg--300x84.png" alt="Gemological Institute of America - GIA" class="footer-badge-img">
           <img src="24204.jpg" alt="D'Iberville/St. Martin Chamber of Commerce" class="footer-badge-img">

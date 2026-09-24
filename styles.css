@@ -518,3 +518,71 @@ main{display:block}
 @media (max-width:850px){
   .hero--home::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(26,29,36,0) 300px,rgba(26,29,36,.94) 520px)}
 }
+
+/* ============================================================ components
+   Added for the client design-review round: directions strip, community
+   news cards, hero badges, insurance card, team cards, CTA photo.
+   ========================================================================== */
+
+/* Small badge row inside a hero panel (Locally Owned, etc.) */
+.hero-badge-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px}
+.hero-badge-small{height:72px;width:auto;border-radius:8px;background:#fff;box-shadow:var(--shadow-sm)}
+
+/* Directions strip under the home hero */
+.directions{background:var(--gold-wash);border-bottom:1px solid var(--line);padding:clamp(28px,4vw,44px) var(--gutter);box-sizing:border-box}
+.directions-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(20px,4vw,48px);align-items:center}
+.directions-inner > *{min-width:0}
+.directions-text{margin:0 0 18px;font-size:15px;line-height:1.6;color:var(--muted)}
+.directions-map iframe{height:clamp(220px,28vw,320px)}
+
+/* Need-cash card: notary certificate replaces the money graphic */
+.cash-img--notary{width:100%;max-width:340px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.18);margin-bottom:18px}
+.cash-note{margin:14px 0 0;display:inline-flex;align-items:center;gap:8px;font-family:'Archivo',sans-serif;font-stretch:115%;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-color-secondary)}
+.cash-note::before{content:"";width:8px;height:8px;background:var(--brand-color-secondary);transform:rotate(45deg);flex:none}
+
+/* Community involvement / news cards */
+.news-grid{align-items:stretch}
+.news-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);min-width:0}
+.news-card-media{position:relative;aspect-ratio:4/3;background:var(--paper-alt);border-bottom:1px solid var(--line);overflow:hidden}
+.news-card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;display:block}
+.news-card-body{padding:18px 20px 22px}
+.news-card-kicker{margin:0 0 6px;font-family:'Archivo',sans-serif;font-stretch:115%;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
+.news-card-title{margin:0 0 8px;font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:18px;line-height:1.2;text-transform:uppercase;color:var(--brand-color-secondary);text-wrap:balance}
+.news-card-text{margin:0;font-size:14.5px;line-height:1.6;color:var(--muted)}
+
+/* Jewelers Mutual insurance card: copy + logo, flyer alongside */
+.insurance-card{display:grid;grid-template-columns:1fr 190px;gap:22px;align-items:start}
+.insurance-copy{min-width:0}
+.insurance-logo{display:block;width:min(220px,100%);height:auto;background:#fff;border:1px solid #efe1a8;border-radius:8px;padding:8px;box-sizing:border-box;margin-bottom:14px}
+.insurance-flyer{display:block;border-radius:8px;overflow:hidden;border:1px solid #efe1a8;background:#fff;box-shadow:var(--shadow-md);transition:transform .2s ease}
+.insurance-flyer:hover{transform:translateY(-2px)}
+.insurance-flyer img{display:block;width:100%;height:auto}
+
+/* Meet Our Team */
+.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:960px;margin:0 auto}
+.team-card{display:grid;grid-template-columns:132px 1fr;gap:18px;align-items:start;background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-sm);min-width:0}
+.team-photo{aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--paper-alt)}
+.team-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.team-photo--empty{display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-size:12px;line-height:1.4;color:var(--muted);border:1px dashed #cfd3da}
+.team-body{min-width:0}
+.team-name{margin:0 0 4px;font-family:'Archivo',sans-serif;font-stretch:118%;font-weight:800;font-size:18px;line-height:1.2;text-transform:uppercase;color:var(--brand-color-secondary)}
+.team-role{margin:0 0 8px;font-size:13px;font-weight:600;color:var(--gold-text)}
+.team-text{margin:0;font-size:14.5px;line-height:1.6;color:var(--muted)}
+
+/* Photo above a gold CTA band */
+.cta-photo{width:min(180px,48vw);height:auto;border-radius:50%;border:5px solid #fff;box-shadow:var(--shadow-md);display:block}
+
+@media (max-width:860px){
+  .directions-inner{grid-template-columns:1fr}
+  .insurance-card{grid-template-columns:1fr 160px}
+}
+@media (max-width:640px){
+  .team-grid{grid-template-columns:1fr}
+  .insurance-card{grid-template-columns:1fr}
+  .insurance-flyer{max-width:240px;margin:0 auto}
+  .hero-badge-small{height:60px}
+}
+@media (max-width:480px){
+  .team-card{grid-template-columns:1fr}
+  .team-photo{max-width:150px}
+}
