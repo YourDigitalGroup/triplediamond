@@ -9,12 +9,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Inter:wght@400..700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
-<!-- Custom Styles for Hero Facebook Layout, Clickable Reviews, Overall Rating, and Background #f1f2f4 -->
 <style>
+  /* TOP BANNER IMAGE */
+  .top-award-banner {
+    width: 100%;
+    background-color: #0d1b2a;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .top-award-banner img {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+ /* TOP ANNOUNCEMENT BANNER - GOLD BACKGROUND */
+  .announcement {
+    background: #d4af37; /* Solid classic gold */
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-align: center;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 20;
+  }
+
   .hero-inner--home {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -25,42 +56,151 @@
     z-index: 10;
   }
 
+  /* LARGER HERO WHITE CARD PANEL */
   .hero-panel--home {
-    flex: 1 1 450px;
+    flex: 0 1 420px;
+    max-width: 420px;
+    background: #ffffff;
+    color: #111827;
+    padding: 1.6rem 1.4rem;
+    border-radius: 12px;
+    border-top: 4px solid #d4af37;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   }
 
+  .hero-title--home {
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin: 0.4rem 0 0.85rem 0;
+    color: #111827;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .hero-lead--home {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: #374151;
+    margin-bottom: 1.1rem;
+  }
+
+  /* HERO BADGES FLEX CONTAINER */
+  .hero-badges-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+  }
+
+  .sunherald-hero-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  }
+
+  .hero-badge-img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .wxxv-hero-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    transition: transform 0.2s ease;
+  }
+
+  .wxxv-hero-logo:hover {
+    transform: scale(1.05);
+  }
+
+  /* ABOUT SECTION AWARDS BADGES */
+  .about-awards-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .about-award-logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+    transition: transform 0.2s ease;
+  }
+
+  .about-award-logo:hover {
+    transform: translateY(-2px);
+  }
+
+  /* HABLAMOS ESPAÑOL BADGE STYLES */
+  .spanish-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #111827;
+    border: 1px solid #d4af37;
+    color: #ffffff;
+    padding: 0.35rem 0.7rem;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .spanish-badge svg {
+    width: 14px;
+    height: 14px;
+    fill: #d4af37;
+    flex-shrink: 0;
+  }
+
+  /* SMALLER & SLIMMER FACEBOOK FEED WRAPPER */
   .hero-fb-wrapper {
-    flex: 1 1 340px;
+    flex: 0 1 320px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: 1rem;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-    max-width: 400px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
   }
 
   .hero-fb-header {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.25rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.75rem;
   }
 
   .hero-fb-header svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     fill: #d4af37;
   }
 
@@ -71,7 +211,60 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  /* TRUSTED PARTNERS BANNER STYLES - STATIC LOGOS */
+  .partners-text-banner {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 1rem;
+  }
+
+  .partners-text-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .partners-text-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #6b7280;
+    margin-bottom: 1.25rem;
+  }
+
+  .partners-text-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .partner-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    min-width: 180px;
+    max-width: 220px;
+    flex: 1 1 180px;
+  }
+
+  .partner-logo {
+    max-height: 55px;
+    max-width: 160px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0;
   }
 
   /* REVIEWS SECTION OVERRIDES FOR LIGHT BACKGROUND (#f1f2f4) */
@@ -84,7 +277,7 @@
   .reviews-bg {
     display: none !important;
   }
-  
+
   .reviews-scrim {
     background: transparent !important;
   }
@@ -95,6 +288,15 @@
 
   .reviews .h2--on-dark {
     color: #111827 !important;
+  }
+
+  .reviews-head-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
   }
 
   .google-rating-badge {
@@ -123,7 +325,32 @@
     font-size: 0.9rem;
     margin-top: 0.2rem;
   }
-  
+
+  /* GOOGLE REVIEWS SECTION AWARD IMAGES - LARGER STYLING */
+  .reviews-awards-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .review-award-img {
+    height: 210px; /* Increased height from 140px for larger display */
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+    padding: 6px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .review-award-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  }
+
   .review-card {
     background: #ffffff !important;
     border: 1px solid #e5e7eb !important;
@@ -166,21 +393,56 @@
     text-decoration: underline;
   }
 
+  
+
   @media (max-width: 850px) {
+    .announcement {
+      font-size: 0.95rem;
+      padding: 0.75rem 0.5rem;
+    }
     .hero-inner--home {
       flex-direction: column;
       text-align: center;
       gap: 2rem;
       padding-top: 4rem;
     }
-    .hero-panel--home {
+    .hero-panel--home, .hero-fb-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .hero-badges-row {
+      justify-content: center;
     }
     .hero-lead--home {
       margin-left: auto;
       margin-right: auto;
+    }
+    .about-awards-row {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .partners-text-banner {
+      padding: 1.5rem 1rem;
+    }
+    .partner-badge {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .reviews-head-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .reviews-awards-container {
+      justify-content: center;
+      width: 100%;
+    }
+    .review-award-img {
+      height: 160px; /* Responsive adjustment for smaller mobile screens */
     }
   }
 </style>
@@ -200,17 +462,59 @@
 {"@type":"Question","name":"Do I need an appointment to visit?","acceptedAnswer":{"@type":"Answer","text":"No appointment is required for most pawn, buying, or selling services — walk in during business hours. For appraisals or custom design work, calling ahead is a good idea."}}
 ]}
 </script>
-<meta name="robots" content="index,follow" data-fourge-seo=""><meta property="og:type" content="website" data-fourge-seo=""><meta name="twitter:card" content="summary_large_image" data-fourge-seo=""><script type="application/ld+json" data-fourge-seo="">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Site Name"},{"@type":"WebPage","name":"Pawn Shop &amp; Fine Jewelry Store in Ocean Springs, MS | Triple Diamond"}]}</script><meta name="generator" content="Fourge 1.14.131">
+<style id="fourge-responsive" data-fourge-resp="">.fge-r1{width:490px !important;max-width:490px !important;margin-left:0px !important;height:204px !important;margin-top:271px !important;}
+</style><meta name="robots" content="index,follow" data-fourge-seo=""><meta property="og:type" content="website" data-fourge-seo=""><meta name="twitter:card" content="summary_large_image" data-fourge-seo=""><script type="application/ld+json" data-fourge-seo="">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Site Name"},{"@type":"WebPage","name":"Pawn Shop &amp; Fine Jewelry Store in Ocean Springs, MS | Triple Diamond"}]}</script><meta name="generator" content="Fourge 1.14.132">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
+<div class="top-award-banner">
+  <img src="/file_000000000f08822fa974074790a74f8a1.png" alt="Voted Best Local Pawnshop on the Mississippi Gulf Coast - Sun Herald Viewers' Choice Awards">
+</div>
+
 <div class="announcement">
-  Voted Best Pawnshop on the Coast — Sun Herald Best of Coastal Mississippi 2026
+  ★ Voted Best Pawnshop on the Coast — Sun Herald Best of Coastal Mississippi 2026 ★
 </div>
 
 <header class="site-header">
+  <style>/* FOOTER BADGES SECTION */
+  .footer-badges-wrapper {
+    margin-top: 1.25rem;
+  }
+
+  .footer-badges-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-badge-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .footer-badge-img:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }</style>
   <div class="header-inner">
     <a class="header-logo" href="/">
       <img src="images/triple-diamond-logo.png" width="480" height="235" alt="Triple Diamond Pawn &amp; Jewelry">
@@ -235,8 +539,8 @@
       <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
     </nav>
     <div class="header-mobile">
-      <a class="mobile-call mobile-call--email" href="mailto:kctriplediamond@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 3.2V17h16V8.2l-8 5.3-8-5.3zM5.4 7l6.6 4.4L18.6 7H5.4z"/></svg><span class="mobile-call-label">Email</span></a>
-      <a class="mobile-call mobile-call--phone" href="tel:+12282734099"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg><span class="mobile-call-label">Call</span></a>
+      <a class="mobile-call mobile-call--email" href="mailto:kctriplediamond@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 3.2V17h16V8.2l-8 5.3-8-5.3zM5.4 7l6.6 4.4L18.6 7H5.4z"></path></svg><span class="mobile-call-label">Email</span></a>
+      <a class="mobile-call mobile-call--phone" href="tel:+12282734099"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"></path></svg><span class="mobile-call-label">Call</span></a>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span aria-hidden="true">☰</span></button>
     </div>
   </div>
@@ -263,24 +567,35 @@
   
   <div class="hero-inner hero-inner--home">
     
-    <!-- Text Panel -->
     <div class="hero-panel hero-panel--home">
       <p class="eyebrow">Ocean Springs, Mississippi</p>
-      <h1 class="hero-title hero-title--home">Ocean Springs' Trusted Pawn Broker &amp; Fine Jewelry Store</h1>
-      <p class="hero-lead hero-lead--home">Two businesses under one roof: a straightforward, fair pawn shop for fast cash — and a jewelry-store-quality showroom for diamonds, fine jewelry, and luxury watches, backed by a GIA-trained jeweler and 100+ years of combined experience.</p>
+      <h1 class="hero-title hero-title--home">VOTED #1 PAWNSHOP ON THE MISSISSIPPI GULFCOAST-SunHearld-WXXV VCA Awards</h1>
+      
+      <div class="hero-badges-row">
+        <img src="21272.jpg" alt="Sun Herald 2026 Winner Best of Coastal Mississippi - Triple Diamond Pawn &amp; Jewelry" class="sunherald-hero-logo">
+        <img src="21007.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="sunherald-hero-logo"><img src="/award.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="sunherald-hero-logo">
+        <img src="21439.png" alt="Locally Owned &amp; Operated" class="hero-badge-img">
+        <img src="https://dev.triplediamond.fourge.com/20372.jpg" alt="I Love OS Winner" class="hero-badge-img">
+        <img src="15996.png" alt="Mississippi Pawnbrokers Association Member" class="hero-badge-img">
+        <div class="spanish-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+          Hablamos Español
+        </div>
+      </div>
+
+      <p class="hero-lead hero-lead--home">Two businesses under one roof: a professional, fair pawn shop for fast cash — and a jewelry-store-quality showroom for diamonds, fine jewelry, and luxury watches, backed by a GIA-trained Gemologist and 100+ years of combined experience.</p>
       <div class="btn-row btn-row--hero">
         <a class="btn" href="tel:+12282734099">Get a Cash Offer</a>
       </div>
     </div>
 
-    <!-- Facebook Feed Glassmorphism Panel -->
     <div class="hero-fb-wrapper">
       <div class="hero-fb-header">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.96 3.62 9.08 8.4 9.84v-6.96h-2.52v-2.88h2.52V9.6c0-2.49 1.48-3.87 3.75-3.87 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.88h-2.34v6.96c4.78-.76 8.4-4.88 8.4-9.84 0-5.5-4.46-9.96-9.96-9.96z"></path></svg>
         Follow Us on Facebook
       </div>
       <div class="hero-fb-iframe-box">
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTripleDiamondPawn&amp;tabs=timeline&amp;width=340&amp;height=400&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="400" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTripleDiamondPawn&amp;tabs=timeline&amp;width=280&amp;height=350&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="280" height="350" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
         </iframe>
       </div>
     </div>
@@ -288,15 +603,36 @@
   </div>
 </section>
 
-<!-- REVIEWS SECTION -->
+<section class="partners-text-banner" aria-label="Trusted Partners and Affiliations">
+  <div class="partners-text-container">
+    <p class="partners-text-label">Our Trusted Partners &amp; Affiliations</p>
+    <div class="partners-text-grid">
+      <div class="partner-badge">
+        <img src="Gemological-Institute-of-America-GIA-Logo-Vector.svg--300x84.png" alt="GIA Logo" class="partner-logo">
+      </div>
+      <div class="partner-badge">
+        <img src="/25185.jpg" alt="Diamond Council of America Logo" class="partner-logo">
+      </div>
+      <div class="partner-badge">
+        <img src="R.gif" alt="Jewelers Vigilance Committee Logo" class="partner-logo">
+      </div>
+      <div class="partner-badge">
+        <img src="20372.jpg" alt="Ocean Springs Chamber Logo" class="partner-logo">
+      </div>
+      <div class="partner-badge">
+        <img src="24204.jpg" alt="d'Iberville Chamber Logo" class="partner-logo">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="reviews" class="reviews">
   <div class="reviews-bg"></div>
   <div class="reviews-scrim"></div>
   <div class="reviews-inner">
-    <div class="reviews-head" style="flex-wrap: wrap; gap: 2rem;">
+    <div class="reviews-head-wrapper">
       <div>
         <p class="eyebrow eyebrow--tight" style="display: flex; align-items: center; gap: 0.5rem;">
-          <!-- Google Logo SVG -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px">
             <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
             <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
@@ -307,88 +643,92 @@
         </p>
         
 
-        <!-- Google Overall Rating & Rating Count (Static fallback, dynamically updated by API) -->
         <div class="google-rating-badge" id="google-overall-rating">
-          <div class="rating-score" id="rating-score-val">4.9</div>
+          <div class="rating-score" id="rating-score-val">4.5</div>
           <div>
             <div class="rating-stars-gold">★★★★★</div>
-            <div class="rating-count" id="rating-count-val">Based on Google Reviews</div>
+            <div class="rating-count" id="rating-count-val">Based on 79 Google Reviews</div>
           </div>
         </div>
 
         <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
           <a class="btn btn--sm" href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="background: #111827; color: #ffffff; border-color: #111827;">Read All Reviews</a>
           <a class="btn btn--sm btn--ink-outline" href="https://search.google.com/local/writereview?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" style="color: #111827; border-color: #9ca3af;">Leave a Review</a>
+          <a class="btn btn--sm" href="mailto:kctriplediamond@gmail.com?subject=Inquiry%20from%20Website" style="background: #d4af37; color: #111827; border-color: #d4af37; font-weight: 700;">Leave Us a Message</a>
         </div>
+      </div>
+
+      <div class="reviews-awards-container">
+        <img src="/212721.jpg" alt="SunHerald 2026 Winner Best of Coastal Mississippi" class="review-award-img">
+        <img src="/award.png" alt="WXXV 25 Viewer's Choice Awards Winner - Best Local Pawn Shop - Triple Diamond Pawn" class="review-award-img">
+        <img src="/2025-12-064.jpg" alt="BusinessRate 2025 Best Pawn Shop Jackson County" class="review-award-img">
       </div>
     </div>
     
-    <!-- Dynamic Reviews Container -->
-    <div class="reviews-grid" id="google-reviews-grid">
-      <!-- Static Fallback 3 Reviews -->
-      <a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" class="review-card-link" style="order: 0;">
-        <figure class="review-card">
-          <span class="review-stars">★★★★★</span>
-          <blockquote class="review-text">From the moment you walk in, you’re greeted with professionalism, honesty, and exceptional service. Their selection of jewelry is stunning — high-quality pieces at unbeatable prices — and their pawnbroking side is just as impressive. Fair, transparent, and welcoming. Highly recommend!</blockquote>
-          <figcaption class="review-name">OS Chamber <span class="review-source">Google Review</span></figcaption>
-        </figure>
-      </a>
-      <a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" class="review-card-link" style="order: 1;">
-        <figure class="review-card">
-          <span class="review-stars">★★★★★</span>
-          <blockquote class="review-text">Been coming here since 2016!! They are fair, friendly and fantastic!! Wonderful selection of goods and very helpful when in need. Thank you for always being there for us!!</blockquote>
-          <figcaption class="review-name">Barb Orr <span class="review-source">Google Review</span></figcaption>
-        </figure>
-      </a>
-      <a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="noopener" class="review-card-link" style="order: 2;">
-        <figure class="review-card">
-          <span class="review-stars">★★★★★</span>
-          <blockquote class="review-text">Really sweet gentlemen that work here. I needed to purchase something for a gift and they were super helpful and prices were reasonable.</blockquote>
-          <figcaption class="review-name">Meghan Beltran <span class="review-source">Google Review</span></figcaption>
-        </figure>
-      </a>
-    </div>
+    <div class="reviews-grid" id="google-reviews-grid"><a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="_noopener" class="review-card-link" style="order: 0;">
+              <figure class="review-card">
+                <span class="review-stars">★★★★★</span>
+                <blockquote class="review-text">Great experience dealing with Ken.
+GIA Certified
+Ken went above and beyond to ensure he helped us!
+Whatever your needs go see Triple Diamond Pawn and Jewelry!
+You won’t be disappointed.</blockquote>
+                <figcaption class="review-name">Robin May <span class="review-source">Google Review</span></figcaption>
+              </figure>
+            </a><a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="_noopener" class="review-card-link" style="order: 1;">
+              <figure class="review-card">
+                <span class="review-stars">★★★★★</span>
+                <blockquote class="review-text">My experience was great! The staff is very courteous, they took the time to explain the transaction to me and I left the store feeling very comfortable with the transaction. Highly recommended. Thank you!</blockquote>
+                <figcaption class="review-name">Rachelle Raub <span class="review-source">Google Review</span></figcaption>
+              </figure>
+            </a><a href="https://search.google.com/local/reviews?placeid=ChIJTfaTT8ELnIgRYQwfpmq-E9Q" target="_blank" rel="_noopener" class="review-card-link" style="order: 2;">
+              <figure class="review-card">
+                <span class="review-stars">★★★★★</span>
+                <blockquote class="review-text">Beautiful selection of jewlery. 1/10 th the price of jewlery stores and just as beautiful. Friendly staff and good selection.</blockquote>
+                <figcaption class="review-name">Deborah Wedgeworth <span class="review-source">Google Review</span></figcaption>
+              </figure>
+            </a></div>
   </div>
 </section>
 
 <section id="categories" class="section section--light">
   <div class="container">
-    <h2 class="h2 h2--center">Buy · Sell · Pawn · Trade</h2>
+    <h2 class="h2 h2--center">BUY · SELL · PAWN</h2>
     <p class="lead-center">If it holds resale value, bring it in. Every item is evaluated on the spot by a team that actually knows what it's looking at—from a gold chain to a loose diamond, a semi-automatic rifle, or a Rolex watch. Our team is GIA-trained and has over 100 years of combined experience.</p>
     <div class="grid-3 grid-top-gap">
       <a class="cat-card" href="jewelry">
-        <div class="cat-card-media"><img src="uploads/triple3.webp" alt="Diamond and gemstone rings — fine jewelry in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
+        <div class="cat-card-media"><img src="/25196.jpg" alt="Diamond and gemstone rings — fine jewelry in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
         <div class="cat-card-body">
           <h3 class="cat-card-title">Fine Jewelry &amp; Diamonds</h3>
           <p class="cat-card-text">New, pre-owned &amp; estate jewelry, certified diamonds, engagement rings — priced below traditional retail.</p>
         </div>
       </a>
       <a class="cat-card" href="gold-silver-coins">
-        <div class="cat-card-media"><img src="uploads/triple2.webp" alt="Gold chain — sell gold, silver and coins in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
+        <div class="cat-card-media"><img src="/25199.jpg" alt="Gold chain — sell gold, silver and coins in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
         <div class="cat-card-body">
           <h3 class="cat-card-title">Gold, Silver &amp; Coins</h3>
-          <p class="cat-card-text">Top value for gold and silver in any condition, bullion, rare coins &amp; collectible currency — paid on the spot.</p>
+          <p class="cat-card-text">Top value for gold and silver in any condition, bullion, rare coins &amp; collectible currency — cash paid on the spot.</p>
         </div>
       </a>
       <a class="cat-card" href="firearms">
-        <div class="cat-card-media"><img src="images/triple4-800.webp" width="800" height="450" alt="Collectible firearms — buy, sell and pawn firearms in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
+        <div class="cat-card-media"><img src="/25205.jpg" width="800" height="450" alt="Collectible firearms — buy, sell and pawn firearms in Ocean Springs, MS" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
         <div class="cat-card-body">
           <h3 class="cat-card-title">Firearms</h3>
-          <p class="cat-card-text">Handguns, rifles, shotguns &amp; collectibles — every transaction fully compliant with federal and Mississippi law.</p>
+          <p class="cat-card-text">Handguns, rifles, shotguns &amp; collectibles — every transaction fully compliant with federal and Mississippi law. We do out of state firearm transfers. Valid Mississippi ID required.</p>
         </div>
       </a>
       <a class="cat-card" href="pawn-loans">
-        <div class="cat-card-media"><img src="uploads/triple5.webp" alt="Vintage record player — electronics, instruments and collectibles" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
+        <div class="cat-card-media"><img src="/290de67b-5c0e-4706-999b-cc3b85302425.png" alt="Vintage record player — electronics, instruments and collectibles" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
         <div class="cat-card-body">
           <h3 class="cat-card-title">Electronics &amp; Instruments</h3>
-          <p class="cat-card-text">Up-to-date electronics, gaming systems, tools &amp; musical instruments — pawn or sell for fast cash.</p>
+          <p class="cat-card-text">Up-to-date electronics, gaming systems, tools (DeWalt Makita Millwuakee)  &amp; musical instruments — pawn or sell for fast cash.</p>
         </div>
       </a>
       <a class="cat-card" href="pawn-loans">
-        <div class="cat-card-media"><img src="uploads/triple6.webp" alt="Antique porcelain figurine — antiques and collectibles" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
+        <div class="cat-card-media"><img src="/painting.png" alt="Antique porcelain figurine — antiques and collectibles" loading="lazy" decoding="async"><span class="gold-bar"></span></div>
         <div class="cat-card-body">
           <h3 class="cat-card-title">Antiques &amp; Collectibles</h3>
-          <p class="cat-card-text">Estate finds, vintage pieces &amp; collectibles, assessed for collector value — never just melt value.</p>
+          <p class="cat-card-text">We buy and sell, evaluate antiques and rarities. Please call 228-273-4099 for a over the phone evaluation before you bring large items in. We do not take sports cards unless graded/Pokeman.   </p>
         </div>
       </a>
       <a class="cat-card cat-card--cash" href="tel:+12282734099">
@@ -409,7 +749,7 @@
       <div>
         <p class="eyebrow eyebrow--tight">HOW DOES A PAWN LOAN WORK?</p>
         <h2 class="h2 h2--on-dark h2--tight">Fast Cash. <span class="text-gold">No Credit Check.</span> Keep Ownership.</h2>
-        <p class="body-text body-text--on-dark">A pawn loan lets you borrow against the value of an item — no long application, no waiting days for approval. Repay the loan and the item is yours again, free and clear. We loan on jewelry, electronics, tools, firearms, instruments, and vehicles including cars, boats, RVs, motorcycles, ATVs, and jet skis.</p>
+        <p class="body-text body-text--on-dark">A pawn loan lets you borrow against the value of an item — no long application, no waiting days for approval. Repay the loan and the item is yours again, free and clear. We loan on jewelry, electronics, tools, firearms, instruments, and vehicles including cars, boats, RVs, motorcycles, ATVs, and jet skis. All loan interest is regulated by the Mississippi dept of banking and consumer finance dept. All loans are fully insured and good for 30 days or longer. </p>
         <a class="btn btn--spaced" href="tel:+12282734099">Call 228-273-4099</a>
       </div>
       <ol class="steps">
@@ -424,19 +764,22 @@
 
 <section id="jewelry" class="section section--alt">
   <div class="container split split--image-left">
-    <div class="framed-image framed-image--4-3">
-      <img src="uploads/triple3.webp" alt="Diamond and gemstone rings in the Triple Diamond showroom" loading="lazy" decoding="async">
-      <span class="gold-bar gold-bar--thick"></span>
+    <div>
+      <div class="framed-image framed-image--4-3">
+        <img src="https://dev.triplediamond.fourge.com/25203.jpg" alt="Diamond and gemstone rings in the Triple Diamond showroom" loading="lazy" decoding="async">
+        <span class="gold-bar gold-bar--thick"></span>
+      </div>
+      <p style="margin-top: 0.75rem; font-weight: 600; color: #111827; font-size: 0.95rem;">Partner, Ken KC Conn-GIA-DCA-AJP-JVC-ADG trained</p>
     </div>
     <div>
       <p class="eyebrow--ink">Fine Jewelry</p>
-      <h2 class="h2 h2--mid">A Real Jeweler, Not Just a Counter Clerk</h2>
-      <p class="body-text">Our on-staff, GIA-trained jeweler evaluates every diamond, gemstone, and fine piece that comes through the door — and handles custom design, resizing, restoration, and repair in-house, never outsourced. Sell your jewelry for real market value, or shop new, pre-owned, and estate pieces priced below traditional retail.</p>
+      <h2 class="h2 h2--mid">A Real jeweler and Appraiser, not just a counter clerk</h2>
+      <p class="body-text">Our on-staff, GIA-trained staff evaluates every diamond, gemstone, and fine piece that comes through the door — and handles custom design, resizing, restoration, and repair in-house, never outsourced. Sell your jewelry for for top dollar on the spot. Shop new, pre-owned, and estate pieces priced below traditional retail.</p>
       <ul class="checklist checklist--gap-top">
         <li>Buy, sell &amp; trade diamonds, gemstones, estate jewelry &amp; luxury watches</li>
         <li>Custom engagement rings &amp; heirloom redesigns, made in-house</li>
         <li>GIA appraisals &amp; jewelry insurance in one visit</li>
-        <li>Repairs: resizing, prong retipping, stone setting, chains &amp; clasps</li>
+        <li>Repairs: resizing, prong retipping, stone setting, chains &amp; clasps, and more</li>
       </ul>
     </div>
   </div>
@@ -447,11 +790,16 @@
     <div>
       <p class="eyebrow--ink">About Us</p>
       <h2 class="h2 h2--mid">Voted Best on the Coast</h2>
-      <p class="body-text">Since 2016, Triple Diamond has been built around one principle: fair value, explained clearly. Whether you're pawning a tool to cover a bill or investing in a piece for a milestone anniversary, every customer gets the same respect and transparency — and the Coast has noticed, naming us Best Pawnshop and Silver Place Best Jewelry Store in the Sun Herald's Best of Coastal Mississippi.</p>
-      <p class="body-text body-text--gap-sm">Don't take our word for it — our reputation is public. Read our reviews and follow us on Facebook.</p>
+      <p class="body-text">Since 2016, Triple Diamond has been built around professionalism and understanding. Whether you're pawning or selling jewelry to cover a bill or investing in a piece for a milestone anniversary, every customer gets the same respect and transparency — and the Coast has noticed, naming us Best Local Pawnshop twice and Best Local Jewelry Store.</p>
+      <p class="body-text body-text--gap-sm">Don't take our word for it — our reputation is public. Read our reviews and follow us on Facebook. Stop in today and see the difference .</p>
       <div class="btn-row btn-row--about">
         <a class="btn btn--ink-outline" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener">Follow on Facebook</a>
         <a class="btn btn--sm" href="contact">Plan Your Visit</a>
+      </div>
+      <div class="about-awards-row">
+        <img src="21272.jpg" alt="Sun Herald 2026 Winner Best of Coastal Mississippi - Triple Diamond Pawn &amp; Jewelry" class="about-award-logo">
+        <img src="21007.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="about-award-logo">
+        <img src="/award.png" alt="Sun Herald 2026 Winner Best Jewelry Store" class="about-award-logo">
       </div>
     </div>
     <div class="framed-image framed-image--16-10">
@@ -506,7 +854,7 @@
         <div>
           <p class="info-label">Address</p>
           <p class="info-value">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
-          <p class="info-note">Minutes from Biloxi &amp; Gautier · On-site parking</p>
+          <p class="info-note">Minutes from Ocean Springs-Gulfport  · On-site parking</p>
         </div>
         <div>
           <p class="info-label">Hours</p>
@@ -529,8 +877,19 @@
   <div class="footer-inner">
     <div>
       <img class="footer-logo" src="images/triple-diamond-logo.png" width="480" height="235" loading="lazy" alt="Triple Diamond Pawn &amp; Jewelry">
-      <p class="footer-about">Ocean Springs' trusted pawn broker and fine jewelry store since 2016 — fair value, explained clearly, backed by 100+ years of combined experience and a GIA-trained jeweler on staff.</p>
+      <p class="footer-about">Ocean Springs' trusted pawn broker and fine jewelry store since 2016 — fair value, explained clearly, backed by 100+ years of combined experience and a GIA-trained Gemologist on staff.</p>
       <a class="footer-fb" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener" aria-label="Triple Diamond on Facebook">f</a>
+      
+      <div class="footer-badges-wrapper">
+        <p class="footer-badges-title">Proud Members of:</p>
+        <div class="footer-badges">
+          <img src="21439.png" alt="Locally Owned &amp; Operated - Triple Diamond Pawn &amp; Jewelry" class="footer-badge-img">
+          <img src="https://dev.triplediamond.fourge.com/20372.jpg" alt="Great American Main Street Award Winner - I Love OS" class="footer-badge-img">
+          <img src="15996.png" alt="Mississippi Pawnbrokers Association Member" class="footer-badge-img">
+          <img src="Gemological-Institute-of-America-GIA-Logo-Vector.svg--300x84.png" alt="Gemological Institute of America - GIA" class="footer-badge-img">
+          <img src="24204.jpg" alt="D'Iberville/St. Martin Chamber of Commerce" class="footer-badge-img">
+        </div>
+      </div>
     </div>
     <div>
       <p class="footer-heading">Services</p>
@@ -562,7 +921,6 @@
 
 <script src="site.js" defer=""></script>
 
-<!-- Script to Fetch Dynamic Google Reviews and Store Rating using Places API (New) -->
 <script>
   async function fetchGoogleReviews() {
     const placeId = 'ChIJTfaTT8ELnIgRYQwfpmq-E9Q';
@@ -595,7 +953,7 @@
             const link = document.createElement('a');
             link.href = `https://search.google.com/local/reviews?placeid=${placeId}`;
             link.target = '_blank';
-            link.rel = 'noopener';
+            link.rel = '_noopener';
             link.className = 'review-card-link';
             link.style.order = index;
             
