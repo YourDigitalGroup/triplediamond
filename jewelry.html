@@ -77,7 +77,17 @@
         </div>
       </div>
       <a class="nav-link" href="firearms">Firearms</a>
-      <a class="nav-link" href="about">About</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">About <span class="nav-caret" aria-hidden="true">▼</span></button>
+        <div class="dropdown-panel" id="about-menu">
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about">About Us</a>
+            <a class="dropdown-link" href="about#team">Meet Our Team</a>
+            <a class="dropdown-link" href="news-community">News &amp; Community</a>
+            <a class="dropdown-link" href="rare-antiquities">Rare Antiquities</a>
+          </div>
+        </div>
+      </div>
       <a class="nav-link" href="contact">Contact</a>
       <a class="nav-phone" href="mailto:kctriplediamond@gmail.com">Email Us</a>
       <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
@@ -97,6 +107,9 @@
     <a href="firearms">Firearms</a>
     <a href="gold-silver-coins">Gold, Silver &amp; Coins</a>
     <a href="about">About</a>
+    <a class="is-sub" href="about#team">Meet Our Team</a>
+    <a href="news-community">News &amp; Community</a>
+    <a href="rare-antiquities">Rare Antiquities</a>
     <a href="contact">Contact &amp; Location</a>
     <a href="mailto:kctriplediamond@gmail.com">Email Us</a>
   </nav>
@@ -267,7 +280,11 @@
       <p class="footer-text">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
       <p class="footer-text"><a class="footer-phone" href="tel:+12282734099">(228) 273-4099</a></p>
       <p class="footer-text footer-text--last">Mon–Fri: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
-      <a class="footer-about-link" href="about">About Us</a>
+      <nav class="footer-nav footer-nav--about" aria-label="Footer about">
+        <a href="about">About Us</a>
+        <a href="news-community">News &amp; Community</a>
+        <a href="rare-antiquities">Rare Antiquities</a>
+      </nav>
     </div>
   </div>
   <div class="footer-bottom">

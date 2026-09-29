@@ -28,7 +28,7 @@
       }
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth >= 1080 && mobileNav.classList.contains('is-open')) setMobileNav(false);
+      if (window.innerWidth >= 1100 && mobileNav.classList.contains('is-open')) setMobileNav(false);
     });
   }
 

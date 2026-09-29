@@ -96,7 +96,17 @@
         </div>
       </div>
       <a class="nav-link" href="firearms">Firearms</a>
-      <a class="nav-link" href="about">About</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">About <span class="nav-caret" aria-hidden="true">▼</span></button>
+        <div class="dropdown-panel" id="about-menu">
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about">About Us</a>
+            <a class="dropdown-link" href="about#team">Meet Our Team</a>
+            <a class="dropdown-link" href="news-community">News &amp; Community</a>
+            <a class="dropdown-link" href="rare-antiquities">Rare Antiquities</a>
+          </div>
+        </div>
+      </div>
       <a class="nav-link" href="contact">Contact</a>
       <a class="nav-phone" href="mailto:kctriplediamond@gmail.com">Email Us</a>
       <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
@@ -116,6 +126,9 @@
     <a href="firearms">Firearms</a>
     <a href="gold-silver-coins">Gold, Silver &amp; Coins</a>
     <a href="about">About</a>
+    <a class="is-sub" href="about#team">Meet Our Team</a>
+    <a href="news-community">News &amp; Community</a>
+    <a href="rare-antiquities">Rare Antiquities</a>
     <a href="contact">Contact &amp; Location</a>
     <a href="mailto:kctriplediamond@gmail.com">Email Us</a>
   </nav>
@@ -144,7 +157,11 @@
   <div class="container grid-2">
     <div class="card">
       <h2 class="h2-card h2-card--gap-md">GIA Appraisals</h2>
-      <p class="card-intro card-intro--tight">Our GIA-trained jeweler personally evaluates and documents:</p>
+      <div class="gemologist-note">
+        <p class="gemologist-label">Our Gemologist</p>
+        <p class="gemologist-text"><strong>Ken “KC” Conn</strong>, staff gemologist and senior appraiser — GIA-trained at the New York campus with more than twelve gemology certifications, including GIA's Ethics and Law.</p>
+      </div>
+      <p class="card-intro card-intro--tight">Our GIA-trained gemologist personally evaluates and documents:</p>
       <ul class="checklist checklist--gap-bottom">
         <li>Diamonds (cut, clarity, color, carat)</li>
         <li>Colored gemstones</li>
@@ -169,7 +186,7 @@
 <section id="gallery" class="section section--flush-top section--light">
   <div class="container">
     <div class="gallery">
-      <figure class="gallery-item"><img src="uploads/triple/ring-79ee6c44.webp" alt="Diamond solitaire ring appraised by our GIA-trained jeweler" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
+      <figure class="gallery-item"><img src="uploads/triple/ring-79ee6c44.webp" alt="Diamond solitaire ring appraised by our GIA-trained gemologist" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
       <figure class="gallery-item"><img src="uploads/triple/women-ring-0ea52e6a.webp" alt="Diamond halo ring documented for insurance" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
       <figure class="gallery-item"><img src="images/gold-crown-ring-1000.webp" width="1000" height="750" alt="Diamond-set gold ring evaluated in-house" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
       <figure class="gallery-item"><img src="uploads/triple/rings-87dcebb1.webp" alt="Certified diamond rings assessed at Triple Diamond" loading="lazy" decoding="async"><span class="gold-bar"></span></figure>
@@ -202,11 +219,11 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false"><span>Can you appraise jewelry I didn’t buy from Triple Diamond?</span><span class="faq-sign">+</span></button>
-      <div class="faq-answer"><p>Yes, our GIA-trained jeweler can appraise jewelry regardless of where it was originally purchased.</p></div>
+      <div class="faq-answer"><p>Yes, our GIA-trained gemologist can appraise jewelry regardless of where it was originally purchased.</p></div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false"><span>How long does a GIA appraisal take?</span><span class="faq-sign">+</span></button>
-      <div class="faq-answer"><p>Appraisal time depends on the complexity of the piece; ask our jeweler for a specific timeframe when you bring your item in.</p></div>
+      <div class="faq-answer"><p>Appraisal time depends on the complexity of the piece; ask our gemologist for a specific timeframe when you bring your item in.</p></div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false"><span>Does Triple Diamond sell jewelry insurance directly?</span><span class="faq-sign">+</span></button>
@@ -222,11 +239,11 @@
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false"><span>Do I need an appointment for a GIA appraisal?</span><span class="faq-sign">+</span></button>
-      <div class="faq-answer"><p>Walk in during business hours; for complex or high-value pieces, calling ahead can help ensure our jeweler has time set aside.</p></div>
+      <div class="faq-answer"><p>Walk in during business hours; for complex or high-value pieces, calling ahead can help ensure our gemologist has time set aside.</p></div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" aria-expanded="false"><span>How often should I get my jewelry re-appraised?</span><span class="faq-sign">+</span></button>
-      <div class="faq-answer"><p>Many jewelry owners re-appraise valuable pieces every few years or after market shifts in precious metal and diamond prices; our jeweler can advise on timing for your specific piece.</p></div>
+      <div class="faq-answer"><p>Many jewelry owners re-appraise valuable pieces every few years or after market shifts in precious metal and diamond prices; our gemologist can advise on timing for your specific piece.</p></div>
     </div>
   </div>
 </section>
@@ -277,7 +294,11 @@
       <p class="footer-text">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
       <p class="footer-text"><a class="footer-phone" href="tel:+12282734099">(228) 273-4099</a></p>
       <p class="footer-text footer-text--last">Mon–Fri: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
-      <a class="footer-about-link" href="about">About Us</a>
+      <nav class="footer-nav footer-nav--about" aria-label="Footer about">
+        <a href="about">About Us</a>
+        <a href="news-community">News &amp; Community</a>
+        <a href="rare-antiquities">Rare Antiquities</a>
+      </nav>
     </div>
   </div>
   <div class="footer-bottom">

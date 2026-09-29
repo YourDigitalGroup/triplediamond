@@ -557,7 +557,17 @@
         </div>
       </div>
       <a class="nav-link" href="firearms">Firearms</a>
-      <a class="nav-link" href="about">About</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">About <span class="nav-caret" aria-hidden="true">▼</span></button>
+        <div class="dropdown-panel" id="about-menu">
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about">About Us</a>
+            <a class="dropdown-link" href="about#team">Meet Our Team</a>
+            <a class="dropdown-link" href="news-community">News &amp; Community</a>
+            <a class="dropdown-link" href="rare-antiquities">Rare Antiquities</a>
+          </div>
+        </div>
+      </div>
       <a class="nav-link" href="contact">Contact</a>
       <a class="nav-phone" href="mailto:kctriplediamond@gmail.com">Email Us</a>
       <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
@@ -577,6 +587,9 @@
     <a href="firearms">Firearms</a>
     <a href="gold-silver-coins">Gold, Silver &amp; Coins</a>
     <a href="about">About</a>
+    <a class="is-sub" href="about#team">Meet Our Team</a>
+    <a href="news-community">News &amp; Community</a>
+    <a href="rare-antiquities">Rare Antiquities</a>
     <a href="contact">Contact &amp; Location</a>
     <a href="mailto:kctriplediamond@gmail.com">Email Us</a>
   </nav>
@@ -779,9 +792,9 @@ You won’t be disappointed.</blockquote>
       <a class="cat-card cat-card--cash" href="tel:+12282734099">
         <div>
           <img class="cash-img cash-img--notary" src="images/notary-services-900.webp" width="900" height="715" alt="State of Mississippi Notary Public Commission — we offer notary services at Triple Diamond" loading="lazy" decoding="async">
-          <h3 class="cash-title">Need cash today?</h3>
-          <p class="cash-text">No credit check. No application. Walk in with your item, walk out with cash — and reclaim your item when the loan is repaid.</p>
-          <p class="cash-note">We Offer Notary Services</p>
+          <h3 class="cash-title">Notary Services</h3>
+          <p class="cash-text">Our Notary agent is available five days a week. Please bring your valid ID and any other signers with you. We notarize legal and real estate documents.</p>
+          <p class="cash-note">Available 5 days a week, 9–5</p>
         </div>
         <span class="cash-cta">Contact us — 228-273-4099 →</span>
       </a>
@@ -819,8 +832,8 @@ You won’t be disappointed.</blockquote>
     </div>
     <div>
       <p class="eyebrow--ink">Fine Jewelry</p>
-      <h2 class="h2 h2--mid">A Real jeweler and Appraiser, not just a counter clerk</h2>
-      <p class="body-text">Our on-staff, GIA-trained staff evaluates every diamond, gemstone, and fine piece that comes through the door — and handles custom design, resizing, restoration, and repair in-house, never outsourced. Sell your jewelry for for top dollar on the spot. Shop new, pre-owned, and estate pieces priced below traditional retail.</p>
+      <h2 class="h2 h2--mid">A Real Gemologist and Appraiser, Not Just a Counter Clerk</h2>
+      <p class="body-text">Our on-staff, GIA-trained gemologist evaluates and appraises every diamond, gemstone, and fine piece that comes through the door, and our jeweler handles custom design, resizing, restoration, and repair in-house, never outsourced. Sell your jewelry for top dollar on the spot. Shop new, pre-owned, and estate pieces priced below traditional retail.</p>
       <ul class="checklist checklist--gap-top">
         <li>Buy, sell &amp; trade diamonds, gemstones, estate jewelry &amp; luxury watches</li>
         <li>Custom engagement rings &amp; heirloom redesigns, made in-house</li>
@@ -903,7 +916,7 @@ You won’t be disappointed.</blockquote>
         </div>
         <div>
           <p class="info-label">Hours</p>
-          <p class="info-value">Monday – Friday: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
+          <p class="info-value info-value--hours">Monday – Friday: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
         </div>
         <div>
           <p class="info-label">Contact</p>
@@ -948,6 +961,9 @@ You won’t be disappointed.</blockquote>
         </div>
       </article>
     </div>
+    <div class="btn-row btn-row--center">
+      <a class="btn btn--sm" href="news-community">See All News &amp; Community</a>
+    </div>
   </div>
 </section>
 </main>
@@ -987,7 +1003,11 @@ You won’t be disappointed.</blockquote>
       <p class="footer-text">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
       <p class="footer-text"><a class="footer-phone" href="tel:+12282734099">(228) 273-4099</a></p>
       <p class="footer-text footer-text--last">Mon–Fri: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
-      <a class="footer-about-link" href="about">About Us</a>
+      <nav class="footer-nav footer-nav--about" aria-label="Footer about">
+        <a href="about">About Us</a>
+        <a href="news-community">News &amp; Community</a>
+        <a href="rare-antiquities">Rare Antiquities</a>
+      </nav>
     </div>
   </div>
   <div class="footer-bottom">

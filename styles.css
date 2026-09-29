@@ -139,11 +139,11 @@ main{display:block}
   .primary-nav{gap:16px;font-size:12px}
   .nav-phone{padding:11px 14px;font-size:12px}
 }
-@media (max-width:1079px){
+@media (max-width:1099px){
   .primary-nav{display:none}
   .header-mobile{display:flex}
 }
-@media (min-width:1080px){
+@media (min-width:1100px){
   .mobile-nav{display:none!important}
 }
 @media (max-width:480px){
@@ -571,6 +571,58 @@ main{display:block}
 
 /* Photo above a gold CTA band */
 .cta-photo{width:min(180px,48vw);height:auto;border-radius:50%;border:5px solid #fff;box-shadow:var(--shadow-md);display:block}
+
+/* Round two of client feedback */
+.info-value--hours{font-weight:700;color:#b42318}
+.btn-row--center{justify-content:center;margin-top:clamp(24px,3vw,32px)}
+
+/* A whole card as a link (About: Rare Antiquities) */
+.card--link{display:block;color:inherit;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card--link:hover{border-color:var(--gold);box-shadow:var(--shadow-md);transform:translateY(-2px);color:inherit}
+.antiquities-card-media{aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--brand-color-secondary);margin-bottom:16px}
+.antiquities-card-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.card-link-cta{display:inline-block;margin-top:6px;font-family:'Archivo',sans-serif;font-stretch:115%;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text)}
+.card--link:hover .card-link-cta{color:var(--brand-color-secondary)}
+
+/* Three-up team grid with photo above the copy */
+.team-grid--3{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1240px}
+.team-grid--3 .team-card{grid-template-columns:1fr;align-content:start}
+.team-grid--3 .team-photo{width:150px}
+.bio-more{margin-top:10px}
+.bio-more summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-family:'Archivo',sans-serif;font-stretch:115%;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text)}
+.bio-more summary::-webkit-details-marker{display:none}
+.bio-more summary::after{content:"+";font-size:18px;line-height:1}
+.bio-more[open] summary::after{content:"−"}
+.bio-more summary:hover{color:var(--brand-color-secondary)}
+.bio-more .bio-more-open,.bio-more[open] .bio-more-closed{display:none}
+.bio-more[open] .bio-more-open{display:inline}
+.bio-more .team-text{margin-top:10px}
+
+/* Appraisals: gemologist callout */
+.gemologist-note{border-left:4px solid var(--gold);background:var(--gold-wash);padding:12px 14px;border-radius:0 8px 8px 0;margin:0 0 18px}
+.gemologist-label{margin:0 0 4px;font-family:'Archivo',sans-serif;font-stretch:115%;font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
+.gemologist-text{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink)}
+
+/* Cards size to their own content instead of stretching to the tallest in the row */
+.grid-2--start{align-items:start}
+
+/* News & Community page */
+.news-grid--2 .news-card-media{aspect-ratio:16/10}
+.news-kicker-date{color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:none}
+.news-card-media--empty{display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);text-align:center;padding:16px}
+.antiquity-figure{margin:0}
+.antiquity-figure figcaption{margin:10px 0 0;font-size:14px;color:var(--muted)}
+.antiquity-placeholder{aspect-ratio:1;border:1px dashed #cfd3da;border-radius:var(--radius);background:var(--paper-alt);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:13px;color:var(--muted)}
+
+@media (max-width:1024px){
+  .team-grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .news-grid .news-card-media--empty{aspect-ratio:auto;min-height:150px}
+}
+@media (max-width:640px){
+  .team-grid--3{grid-template-columns:1fr}
+}
 
 @media (max-width:860px){
   .directions-inner{grid-template-columns:1fr}

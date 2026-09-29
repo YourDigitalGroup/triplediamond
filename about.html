@@ -107,37 +107,6 @@
     margin: 0 !important;
   }
 
-  /* Clean Award Image Container — half size, pinned to the top right of the hero */
-  .hero-award-card {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    max-width: 200px;
-    width: 100%;
-    align-self: flex-start;
-    margin-left: auto;
-  }
-
-  @media (max-width: 899px) {
-    .hero-award-card {
-      max-width: 170px;
-      align-self: flex-end;
-      margin-top: -0.75rem;
-    }
-  }
-
-  .hero-award-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    border: none !important;
-    object-fit: cover;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  }
-
   /* FOOTER BADGES SECTION */
   .footer-badges-wrapper {
     margin-top: 1.25rem;
@@ -245,7 +214,17 @@
         </div>
       </div>
       <a class="nav-link" href="firearms">Firearms</a>
-      <a class="nav-link" href="about">About</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="about-menu">About <span class="nav-caret" aria-hidden="true">▼</span></button>
+        <div class="dropdown-panel" id="about-menu">
+          <div class="dropdown-menu">
+            <a class="dropdown-link" href="about">About Us</a>
+            <a class="dropdown-link" href="about#team">Meet Our Team</a>
+            <a class="dropdown-link" href="news-community">News &amp; Community</a>
+            <a class="dropdown-link" href="rare-antiquities">Rare Antiquities</a>
+          </div>
+        </div>
+      </div>
       <a class="nav-link" href="contact">Contact</a>
       <a class="nav-phone" href="mailto:kctriplediamond@gmail.com">Email Us</a>
       <a class="nav-phone" href="tel:+12282734099">228-273-4099</a>
@@ -265,6 +244,9 @@
     <a href="firearms">Firearms</a>
     <a href="gold-silver-coins">Gold, Silver &amp; Coins</a>
     <a href="about">About</a>
+    <a class="is-sub" href="about#team">Meet Our Team</a>
+    <a href="news-community">News &amp; Community</a>
+    <a href="rare-antiquities">Rare Antiquities</a>
     <a href="contact">Contact &amp; Location</a>
     <a href="mailto:kctriplediamond@gmail.com">Email Us</a>
   </nav>
@@ -281,9 +263,6 @@
       <a class="btn btn--sm btn--spaced" href="#team">Meet Our Team</a>
     </div>
     
-    <div class="hero-award-card">
-      <img src="25186.jpg" alt="Kenneth KC Conn - Mississippi Pawnbrokers Association Pawnbroker of the Year 2026 Award">
-    </div>
   </div>
 </section>
 
@@ -305,11 +284,15 @@
 <section id="what-sets-us-apart" class="section section--flush-top section--light">
   <div class="container">
     <h2 class="h2-light section-heading-gap">What Sets Us Apart</h2>
-    <div class="grid-2 grid-2--gap20">
+    <div class="grid-2 grid-2--gap20 grid-2--start">
       <div class="card card--pad-md"><h3 class="card-title">Depth of Expertise</h3><p class="card-text">Most pawn shops have one or two people who "know jewelry." We built our entire team around it. Our partners have over 100 years of combined experience. </p></div>
       <div class="card card--pad-md"><h3 class="card-title">40 year experienced JEWELER ON STAFF</h3><p class="card-text">Our jeweler handles appraisals, custom design, and repair in-house — not an outside contractor.</p></div>
       <div class="card card--pad-md"><h3 class="card-title">Reputation You Can Check</h3><p class="card-text">We'd rather you read our Google Reviews and <a class="inline-link" href="https://www.facebook.com/TripleDiamondPawn" target="_blank" rel="noopener">Facebook page</a> than take our word for it.</p></div>
-      <div class="card card--pad-md"><h3 class="card-title">Check Out Our Rare Antiquities</h3><p class="card-text">We buy, sell and evaluate rare antiques and collectibles. Photos and details on 10–15 of our rarest pieces are coming soon — check back, or stop in to see them in person.</p></div>
+      <a class="card card--pad-md card--link antiquities-card" href="rare-antiquities">
+        <div class="antiquities-card-media"><img src="images/st-nicholas-statue.webp" width="406" height="648" alt="Carved and painted wooden statue of St. Nicholas in the Triple Diamond showroom" loading="lazy" decoding="async"></div>
+        <h3 class="card-title">Check Out Our Rare Antiquities</h3>
+        <span class="card-link-cta">View the collection →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -318,21 +301,34 @@
   <div class="container">
     <h2 class="h2-light section-heading-gap-sm">Meet Our Team</h2>
     <p class="lead-center lead-center--sub">Over 100 years of combined pawn, jewelry, gemology and watch experience under one roof.</p>
-    <div class="team-grid">
+    <div class="team-grid team-grid--3">
       <article class="team-card">
-        <div class="team-photo"><img src="/25203.jpg" alt="Ken “KC” Conn, Partner at Triple Diamond Pawn and Jewelry" loading="lazy" decoding="async"></div>
+        <div class="team-photo"><img src="images/kc-conn-interim-520.webp" width="520" height="650" alt="Ken “KC” Conn, Partner at Triple Diamond Pawn and Jewelry" loading="lazy" decoding="async"></div>
         <div class="team-body">
           <h3 class="team-name">Ken “KC” Conn</h3>
-          <p class="team-role">Partner · GIA-trained Gemologist &amp; Appraiser</p>
-          <p class="team-text">GIA, DCA, AJP, JVC and ADG trained, and the Mississippi Pawnbrokers Association's Pawnbroker of the Year 2026. KC personally evaluates, appraises and designs jewelry in-house.</p>
+          <p class="team-role">Partner · Pawnbroker, Staff Gemologist, Senior Appraiser &amp; Mississippi Notary Public</p>
+          <p class="team-text">Ken “KC” Conn began his career in the pawn and jewelry industry in 1992 after working offshore in Louisiana. He learned the business from the ground up with family friends at Biloxi Pawn &amp; Auto before becoming general manager of its sister store, Edgewater Pawn &amp; Jewelry in Biloxi.</p>
+          <details class="bio-more">
+            <summary><span class="bio-more-closed">Read more</span><span class="bio-more-open">Read less</span></summary>
+            <p class="team-text">While advancing his career, Ken pursued professional jewelry education through the Gemological Institute of America in New York, earning multiple certifications including Accredited Jewelry Professional and Applied Jewelry Professional credentials, plus specialized education in jewelry appraisal, ethics, and law.</p>
+            <p class="team-text">In 2002, Ken hosted <em>Cajun in the City</em>, the first Cajun cooking TV show filmed in New York City, airing three seasons to over 2.5 million weekly viewers; he's currently CEO of Justin Wilson Southern Products.</p>
+            <p class="team-text">In 2004, Ken joined Gem Financial Services, a 26-location pawnbroking company in NYC, as Executive Director of Training, later becoming the company's first Director of Human Resources overseeing roughly 250 employees.</p>
+            <p class="team-text">After returning to the Mississippi Gulf Coast, Ken and his partners opened Triple Diamond Pawn &amp; Jewelry, Inc. in 2016. With 30+ years of experience, he serves as pawnbroker, staff gemologist, senior appraiser, and Mississippi Notary Public. He is Vice President of the Mississippi Pawnbrokers Association (2026 Pawnbroker of the Year), serves on the Board of the D'Iberville–St. Martin Area Chamber of Commerce, and volunteers as an ambassador for the Ocean Springs Chamber of Commerce–Main Street–Tourism Bureau.</p>
+          </details>
         </div>
       </article>
       <article class="team-card">
         <div class="team-photo team-photo--empty" aria-hidden="true"><span>Photo coming soon</span></div>
         <div class="team-body">
-          <h3 class="team-name">More of the Team</h3>
-          <p class="team-role">Jewelers, pawnbrokers &amp; firearms specialists</p>
-          <p class="team-text">Profiles of the rest of our 100-year team are on the way. Stop in and say hello in the meantime.</p>
+          <h3 class="team-name">George Junkert</h3>
+          <p class="team-text">Bio coming soon.</p>
+        </div>
+      </article>
+      <article class="team-card">
+        <div class="team-photo team-photo--empty" aria-hidden="true"><span>Photo coming soon</span></div>
+        <div class="team-body">
+          <h3 class="team-name">Team Member</h3>
+          <p class="team-text">Name, title and bio coming soon.</p>
         </div>
       </article>
     </div>
@@ -432,7 +428,11 @@
       <p class="footer-text">7401 Washington Avenue<br>Ocean Springs, MS 39564</p>
       <p class="footer-text"><a class="footer-phone" href="tel:+12282734099">(228) 273-4099</a></p>
       <p class="footer-text footer-text--last">Mon–Fri: 9 AM – 5 PM<br>Saturday: 9 AM – 3 PM<br>Sunday: Closed</p>
-      <a class="footer-about-link" href="about">About Us</a>
+      <nav class="footer-nav footer-nav--about" aria-label="Footer about">
+        <a href="about">About Us</a>
+        <a href="news-community">News &amp; Community</a>
+        <a href="rare-antiquities">Rare Antiquities</a>
+      </nav>
     </div>
   </div>
   <div class="footer-bottom">
